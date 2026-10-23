@@ -115,21 +115,6 @@ projects:
     github: "https://github.com/ckdlscjs/BattleFront"
     document: ""
     video: ""
-  - id: project-04
-    name: "[이전 / 학교 프로젝트명]"
-    category: team
-    featured: false
-    technology: "[사용 기술]"
-    period: "[개발 기간]"
-    role: "[개발 인원 / 본인 역할]"
-    image: ""
-    summary: "[프로젝트 개요와 본인의 기여를 작성]"
-    highlights: ["[주요 구현 내용]"]
-    details: "[본인이 맡은 작업과 확인 가능한 결과]"
-    github: ""
-    document: ""
-    video: ""
-
     
   # ==========================================
   # 04. UnDeadSpace
@@ -385,7 +370,6 @@ projects:
     github: ""
     document: ""
     video: ""
-
 career:
   - title: "[회사 / 직무]"
     period: "[근무 기간]"
