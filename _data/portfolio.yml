@@ -1,0 +1,91 @@
+# Edit the text and URLs below. Empty URLs are not rendered as links.
+profile:
+  name: "[이름]"
+  role: "[지원 직무]"
+  introduction: "[본인을 소개하는 짧은 문장]"
+  skills: ["기술 01", "기술 02", "기술 03"]
+  image: ""
+  email: ""
+  github: "https://github.com/ckdlscjs"
+  blog: ""
+  pdf: ""
+  about:
+    - title: "소개"
+      text: "[개발 경험과 관심 분야에 대한 소개]"
+    - title: "문제 해결"
+      text: "[문제 상황, 본인의 판단과 행동, 해결 결과]"
+    - title: "협업"
+      text: "[담당 역할과 팀원들과 함께 문제를 해결한 경험]"
+projects:
+  - id: project-01
+    name: "[대표 프로젝트명]"
+    category: personal
+    featured: true
+    technology: "[언어 / 엔진]"
+    period: "[개발 기간]"
+    role: "[개발 인원 / 본인 역할]"
+    image: ""
+    summary: "[어떤 결과물인지, 본인이 맡은 범위와 주요 구현 결과를 한 단락으로 작성]"
+    highlights: ["[핵심 문제 해결 01]", "[핵심 문제 해결 02]"]
+    details: "[문제 인식 → 설계와 구현 → 시행착오 → 해결 및 결과]"
+    github: ""
+    document: ""
+    video: ""
+  - id: project-02
+    name: "[팀 프로젝트명]"
+    category: team
+    featured: true
+    technology: "[언어 / 엔진]"
+    period: "[개발 기간]"
+    role: "[개발 인원 / 본인 역할]"
+    image: ""
+    summary: "[프로젝트의 목적, 본인의 담당 기능, 팀 작업과 연결한 내용을 작성]"
+    highlights: ["[담당 기능 01]", "[담당 기능 02]"]
+    details: "[직접 구현한 범위와 협업 과정, 문제 해결 결과]"
+    github: ""
+    document: ""
+    video: ""
+  - id: project-03
+    name: "[개인 프로젝트명]"
+    category: personal
+    featured: false
+    technology: "[사용 기술]"
+    period: "[개발 기간]"
+    role: "[본인 역할]"
+    image: ""
+    summary: "[제작 목적과 주요 기능, 실제 사용처를 작성]"
+    highlights: ["[주요 구현 내용]"]
+    details: "[설계 선택의 이유와 구현 과정, 결과]"
+    github: ""
+    document: ""
+    video: ""
+  - id: project-04
+    name: "[이전 / 학교 프로젝트명]"
+    category: team
+    featured: false
+    technology: "[사용 기술]"
+    period: "[개발 기간]"
+    role: "[개발 인원 / 본인 역할]"
+    image: ""
+    summary: "[프로젝트 개요와 본인의 기여를 작성]"
+    highlights: ["[주요 구현 내용]"]
+    details: "[본인이 맡은 작업과 확인 가능한 결과]"
+    github: ""
+    document: ""
+    video: ""
+career:
+  - title: "[회사 / 직무]"
+    period: "[근무 기간]"
+    description: "[담당 업무와 주요 경험]"
+education:
+  - title: "[학교 / 전공]"
+    period: "[재학 기간]"
+    description: "[학위 / 관련 교육 내용]"
+  - title: "[교육 기관 / 과정]"
+    period: "[교육 기간]"
+    description: "[주요 학습 내용]"
+awards:
+  - title: "[수상 / 활동명]"
+    period: "[날짜]"
+    description: "[주관 기관과 활동 내용]"
+    url: ""
