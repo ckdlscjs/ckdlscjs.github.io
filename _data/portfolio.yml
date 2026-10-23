@@ -18,9 +18,9 @@ profile:
       text: "[담당 역할과 팀원들과 함께 문제를 해결한 경험]"
 projects:
   - id: project-01
-    name: "DirectX11 기반 자체 엔진"
+    name: "DirectX11, EntityComponentSystem 기반 렌더러"
     category: personal
-    featured: true
+    featured: false
     technology: "C++ / DirectX11 / HLSL / ImGui"
     period: "[실제 개발 기간]"
     role: "개인 프로젝트 · 엔진 및 렌더러 개발"
@@ -56,7 +56,7 @@ projects:
   - id: project-02
     name: "[팀 프로젝트명]"
     category: team
-    featured: true
+    featured: false
     technology: "[언어 / 엔진]"
     period: "[개발 기간]"
     role: "[개발 인원 / 본인 역할]"
