@@ -1,23 +1,16 @@
 
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ site.title | default: "Portfolio" | escape }}</title>
-  {% seo %}
-  {% include head.html %}
-  <link rel="stylesheet"
-        href="{{ '/assets/portfolio.css' | relative_url }}?v={{ site.time | date: '%s' }}">
-</head>
+{% include head.html %}
+<link rel="stylesheet"
+      href="{{ '/assets/portfolio.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 
 <body class="portfolio-page" id="top">
 {% assign p = site.data.portfolio %}
 
 <a class="skip-link" href="#about">본문으로 건너뛰기</a>
 
-<!-- Navigation -->
+<!-- 상단 메뉴 -->
 <header class="site-nav">
   <div class="page-width nav-inner">
     <a class="brand" href="#top">
@@ -57,7 +50,7 @@
         <h1 id="intro-title">{{ p.profile.name | escape }}</h1>
         <p class="role">{{ p.profile.role | escape }}</p>
 
-        {% if p.profile.introduction != '' %}
+        {% if p.profile.introduction != blank %}
         <p class="intro-copy">
           {{ p.profile.introduction | escape }}
         </p>
@@ -73,7 +66,7 @@
           </button>
           {% endif %}
 
-          {% if p.profile.github != '' %}
+          {% if p.profile.github != blank %}
           <a class="text-link"
              href="{{ p.profile.github | escape }}"
              target="_blank"
@@ -83,7 +76,7 @@
           </a>
           {% endif %}
 
-          {% if p.profile.blog != '' %}
+          {% if p.profile.blog != blank %}
           <a class="text-link"
              href="{{ p.profile.blog | escape }}"
              target="_blank"
@@ -92,7 +85,7 @@
           </a>
           {% endif %}
 
-          {% if p.profile.pdf != '' %}
+          {% if p.profile.pdf != blank %}
           <a class="text-link"
              href="{{ p.profile.pdf | relative_url }}"
              target="_blank"
@@ -103,7 +96,7 @@
         </div>
       </div>
 
-      {% if p.profile.image != '' %}
+      {% if p.profile.image != blank %}
       <img class="profile-image"
            src="{{ p.profile.image | relative_url }}"
            alt="{{ p.profile.name | escape }} 프로필 사진">
@@ -141,7 +134,6 @@
            id="projects"
            aria-labelledby="projects-title">
     <div class="page-width">
-
       <div class="section-heading">
         <div>
           <span class="eyebrow">PROJECTS</span>
@@ -154,29 +146,31 @@
         </span>
       </div>
 
-      <!-- 프로젝트 분류 -->
+      <!-- 프로젝트 필터 -->
       <div class="filters"
            role="group"
            aria-label="프로젝트 분류">
         <button type="button"
                 data-filter="all"
                 aria-pressed="true">전체</button>
+
         <button type="button"
                 data-filter="team"
                 aria-pressed="false">팀</button>
+
         <button type="button"
                 data-filter="personal"
                 aria-pressed="false">개인</button>
       </div>
 
+      <!-- 프로젝트 카드 -->
       <div class="project-grid">
         {% for project in p.projects %}
         <article class="project-card"
                  data-category="{{ project.category | escape }}">
 
-          <!-- 이미지 -->
           <div class="project-media">
-            {% if project.image != '' %}
+            {% if project.image != blank %}
             <img src="{{ project.image | relative_url }}"
                  alt="{{ project.name | escape }} 프로젝트 화면"
                  loading="lazy">
@@ -188,15 +182,15 @@
             {% endif %}
           </div>
 
-          <!-- 프로젝트 내용 -->
           <div class="project-body">
+
             <div class="project-labels">
               <span>{{ project.technology | escape }}</span>
               <span class="category-label">
                 {% if project.category == 'team' %}
-                  팀 프로젝트
+                팀 프로젝트
                 {% else %}
-                  개인 프로젝트
+                개인 프로젝트
                 {% endif %}
               </span>
             </div>
@@ -221,20 +215,13 @@
             </ul>
             {% endif %}
 
-            <!--
-              프로젝트 링크
-
-              1. 일반 링크 배열 (links)
-              2. 기존 GitHub / Document
-              3. 복수 영상 (videos)
-              4. 기존 단일 영상 (video)
-            -->
+            <!-- 일반 링크 / GitHub / 영상 -->
             <div class="project-links">
 
-              <!-- 일반 링크가 등록된 경우 -->
+              <!-- 사용자 지정 링크 -->
               {% if project.links.size > 0 %}
                 {% for link in project.links %}
-                  {% if link.url != '' %}
+                  {% if link.url != blank %}
                   <a href="{{ link.url | escape }}"
                      target="_blank"
                      rel="noopener noreferrer">
@@ -244,11 +231,10 @@
                   </a>
                   {% endif %}
                 {% endfor %}
-
-              <!-- 일반 링크가 없으면 기존 필드 사용 -->
               {% else %}
 
-                {% if project.github != '' %}
+                <!-- 기존 GitHub -->
+                {% if project.github != blank %}
                 <a href="{{ project.github | escape }}"
                    target="_blank"
                    rel="noopener noreferrer">
@@ -257,7 +243,8 @@
                 </a>
                 {% endif %}
 
-                {% if project.document != '' %}
+                <!-- 기존 기술 문서 -->
+                {% if project.document != blank %}
                 <a href="{{ project.document | escape }}"
                    target="_blank"
                    rel="noopener noreferrer">
@@ -268,10 +255,10 @@
 
               {% endif %}
 
-              <!-- 여러 영상 -->
+              <!-- 영상 여러 개 -->
               {% if project.videos.size > 0 %}
                 {% for video in project.videos %}
-                  {% if video.url != '' %}
+                  {% if video.url != blank %}
                   <a href="{{ video.url | escape }}"
                      target="_blank"
                      rel="noopener noreferrer">
@@ -282,16 +269,17 @@
                 {% endfor %}
 
               <!-- 기존 단일 영상 -->
-              {% elsif project.video != '' %}
-              <a href="{{ project.video | escape }}"
-                 target="_blank"
-                 rel="noopener noreferrer">
-                <i class="fab fa-youtube" aria-hidden="true"></i>
-                시연 영상
-              </a>
+              {% elsif project.video != blank %}
+                <a href="{{ project.video | escape }}"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                  <i class="fab fa-youtube" aria-hidden="true"></i>
+                  시연 영상
+                </a>
               {% endif %}
 
             </div>
+
           </div>
         </article>
         {% endfor %}
@@ -299,7 +287,7 @@
     </div>
   </section>
 
-  <!-- 04. 교육·활동·경력 -->
+  <!-- 04. 교육 / 활동 / 경력 -->
   <section class="section-band background-section"
            id="background"
            aria-labelledby="background-title">
@@ -313,7 +301,6 @@
 
       <div class="background-unified">
 
-        <!-- 학력 및 교육 -->
         {% if p.education.size > 0 %}
         <div class="background-group">
           <h3 class="column-heading">학력 및 교육</h3>
@@ -330,7 +317,6 @@
         </div>
         {% endif %}
 
-        <!-- 활동 및 자격 -->
         {% if p.awards.size > 0 %}
         <div class="background-group">
           <h3 class="column-heading">활동 및 자격</h3>
@@ -342,7 +328,7 @@
               <h4>{{ item.title | escape }}</h4>
               <p>{{ item.description | escape }}</p>
 
-              {% if item.url != '' %}
+              {% if item.url != blank %}
               <a class="text-link"
                  href="{{ item.url | escape }}"
                  target="_blank"
@@ -356,7 +342,6 @@
         </div>
         {% endif %}
 
-        <!-- 경력 -->
         {% if p.career.size > 0 %}
         <div class="background-group">
           <h3 class="column-heading">경력</h3>
@@ -372,6 +357,7 @@
           {% endfor %}
         </div>
         {% endif %}
+
       </div>
     </div>
   </section>
@@ -389,14 +375,14 @@
     </p>
 
     <div class="contact-links">
-      {% if p.profile.email != '' %}
+      {% if p.profile.email != blank %}
       <a href="mailto:{{ p.profile.email | escape }}">
         <i class="fas fa-envelope" aria-hidden="true"></i>
         {{ p.profile.email | escape }}
       </a>
       {% endif %}
 
-      {% if p.profile.github != '' %}
+      {% if p.profile.github != blank %}
       <a href="{{ p.profile.github | escape }}"
          target="_blank"
          rel="noopener noreferrer">
@@ -405,7 +391,7 @@
       </a>
       {% endif %}
 
-      {% if p.profile.blog != '' %}
+      {% if p.profile.blog != blank %}
       <a href="{{ p.profile.blog | escape }}"
          target="_blank"
          rel="noopener noreferrer">
@@ -418,7 +404,6 @@
 
 </main>
 
-<!-- Footer -->
 <footer class="page-width site-footer">
   <span>{{ p.profile.name | escape }} · Portfolio</span>
   <a href="#top">
@@ -433,6 +418,7 @@
         aria-labelledby="about-dialog-title">
   <div class="dialog-header">
     <h2 id="about-dialog-title">자기소개</h2>
+
     <button type="button"
             class="icon-button"
             data-close
