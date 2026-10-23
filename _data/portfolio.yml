@@ -1,15 +1,46 @@
 # Edit the text and URLs below. Empty URLs are not rendered as links.
+
 profile:
-  name: "[이름]"
-  role: "[지원 직무]"
-  introduction: "[본인을 소개하는 짧은 문장]"
-  skills: ["기술 01", "기술 02", "기술 03"]
+  name: "이선용"
+  role: "게임 클라이언트 프로그래머"
+
+  # 자기소개 문장은 추후 작성
+  introduction: ""
+
+  # 기술 스택
+  skills:
+    - "C++17"
+    - "STL"
+    - "DirectX11"
+    - "HLSL"
+    - "DirectXMath"
+    - "ECS / DOD"
+    - "Deferred Shading"
+    - "GPU Compute Shader"
+    - "Unreal Engine 5"
+    - "Blueprint"
+    - "UMG"
+    - "AI Behavior Tree"
+    - "ImGui"
+    - "Assimp / FBX SDK"
+    - "FMOD"
+    - "Git / GitHub"
+    - "Perforce"
+    - "Visual Studio"
+
+  # 프로필 이미지 추후 추가
   image: ""
-  email: ""
+
+  # 연락처 및 외부 링크
+  email: "syl610@naver.com"
   github: "https://github.com/ckdlscjs"
-  blog: ""
+  blog: "https://blog.naver.com/syl610"
+
+  # 포트폴리오 PDF 추후 추가
   pdf: ""
-  about:
+
+  # 자기소개 팝업 내용은 추후 작성
+  about: 
     - title: "소개"
       text: "[개발 경험과 관심 분야에 대한 소개]"
     - title: "문제 해결"
@@ -392,19 +423,81 @@ projects:
     github: ""
     document: ""
     video: ""
+
+# ==========================================
+# 경력
+# ==========================================
 career:
-  - title: "[회사 / 직무]"
-    period: "[근무 기간]"
-    description: "[담당 업무와 주요 경험]"
+  - title: "㈜비주얼샤워 | 게임 클라이언트 개발 인턴"
+    period: "2019.04 ~ 2019.06"
+    description: >-
+      모바일 게임 '블루스톤2'의 클라이언트 개발 업무에 참여.
+      자체 게임 엔진의 API를 활용하여 VIP 등급 정보 페이지와
+      일일·주간 출석 보상 UI를 리뉴얼했습니다.
+      서버에서 전달되는 보상 정보와 UI의 연동 기능을 구현하고,
+      길드원 간 연료(피로도) 지원 시스템의 버그를 수정했습니다.
+      기존 상용 게임의 코드 분석, UI 시스템 유지보수 및
+      기능 개선 업무를 경험했습니다.
+
+
+# ==========================================
+# 학력 및 교육
+# ==========================================
 education:
-  - title: "[학교 / 전공]"
-    period: "[재학 기간]"
-    description: "[학위 / 관련 교육 내용]"
-  - title: "[교육 기관 / 과정]"
-    period: "[교육 기간]"
-    description: "[주요 학습 내용]"
+  # 01. 게임 개발 전문 교육
+  - title: "KGCA 게임아카데미 | 게임 프로그래밍 전문가 과정"
+    period: "2022.07 ~ 2023.06"
+    description: >-
+      C++ 기반 게임 프로그래밍과 DirectX11 렌더링,
+      Unreal Engine 5를 활용한 게임 개발 과정을 이수했습니다.
+      DirectX11 기반 2D·3D 게임 개발과 MapTool 제작,
+      Unreal Engine 기반 개인 및 팀 프로젝트를 진행했습니다.
+      주요 프로젝트로 KirbySurvivors, RandomTowerDefense,
+      LoLShinSouls, UnDeadSpace를 개발했으며,
+      팀 프로젝트에서는 팀장으로 참여했습니다.
+
+  # 02. AR/VR 소프트웨어 교육
+  - title: "KITRI 한국정보기술연구원 | AR/VR SW 응용 구직자 과정"
+    period: "2018.03 ~ 2018.08"
+    description: >-
+      AR/VR 콘텐츠 및 응용 소프트웨어 개발 교육을 이수했습니다.
+      Java와 Android Studio를 활용한 모바일 애플리케이션
+      개발 및 Unity 기반 게임 개발을 경험했습니다.
+      Android 방 탈출 게임 RoomEscape와
+      Unity 기반 2D 탄막 슈팅 게임 TheUndertaleOfZelda를
+      제작했습니다.
+
+  # 03. 대학교
+  - title: "대진대학교 | 컴퓨터공학과"
+    period: "2011.03 ~ 2018.02"
+    description: >-
+      컴퓨터공학과 학사 졸업 (학점 3.87 / 4.5).
+      C/C++, Java, 자료구조, 데이터베이스 및
+      소프트웨어 개발 관련 학습을 진행했습니다.
+      졸업 작품으로 Arduino 기반 미세먼지 측정 장치와
+      Android 애플리케이션을 연동한 MAC 프로젝트를 수행했으며,
+      별도로 수분 섭취량 관리 앱 WaterBank를 개발했습니다.
+
+  # 04. 고등학교
+  - title: "동국대학교사범대학부속고등학교"
+    period: "2008.03 ~ 2011.02"
+    description: "졸업"
+
+
+# ==========================================
+# 자격증 및 활동
+# ==========================================
 awards:
-  - title: "[수상 / 활동명]"
-    period: "[날짜]"
-    description: "[주관 기관과 활동 내용]"
+  # 01. 정보처리기사
+  - title: "정보처리기사"
+    period: "2016.11"
+    description: >-
+      한국산업인력공단 시행 국가기술자격 취득.
+    url: ""
+
+  # 02. 일본어능력시험
+  - title: "JLPT N3"
+    period: "2018.08"
+    description: >-
+      일본어능력시험(JLPT) N3 취득.
     url: ""
