@@ -2,6 +2,7 @@
 .portfolio-page[data-theme=dark]{--bg:#191b1e;--band:#202327;--surface:#25282d;--text:#edf0f2;--muted:#b1b8c0;--line:#3c4148;--accent:#86d9bb;--tag:#293c35;color-scheme:dark}
 .portfolio-page *{box-sizing:border-box;letter-spacing:0}
 .portfolio-page h1,.portfolio-page h2,.portfolio-page h3,.portfolio-page h4,.portfolio-page p{margin:0;color:inherit;overflow-wrap:anywhere}
+.portfolio-page h2,.portfolio-page h3,.portfolio-page h4{text-align:left;border:0;padding:0;text-decoration:none}
 .portfolio-page a{color:var(--accent);text-decoration:none;overflow-wrap:anywhere}
 .portfolio-page a:hover{text-decoration:underline}
 .portfolio-page button{font:inherit;cursor:pointer;color:inherit}
