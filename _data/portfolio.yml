@@ -79,9 +79,17 @@ projects:
       - "렌더링 최적화 — Frustum Culling, Foliage Instancing 및 DrawIndexedInstanced 기반 식생 배치"
       - "게임 클라이언트 시스템 — SpringArm 카메라 충돌 회피, Bezier/Perlin Noise 연출, 계층형 UI 및 RTT 미니맵"
 
+    
     github: "https://github.com/ckdlscjs/TeamProject"
     document: ""
-    video: ""
+
+    videos:
+      - title: "게임 플레이"
+        url: "https://youtu.be/P7W4FhfePHU"
+
+      - title: "MapTool 시연"
+        url: "https://youtu.be/_ik09B4ptmo"
+
 
   # ==========================================
   # 03. TheBattleFront
@@ -114,7 +122,9 @@ projects:
 
     github: "https://github.com/ckdlscjs/BattleFront"
     document: ""
-    video: ""
+     videos:
+      - title: "게임 플레이"
+        url: "https://youtu.be/uDiQvUdp6hE?si=5JuZOzHQuRLCWNh_"
     
   # ==========================================
   # 04. UnDeadSpace
@@ -145,7 +155,9 @@ projects:
 
     github: ""
     document: ""
-    video: ""
+    videos:
+      - title: "게임 플레이"
+        url: "https://youtu.be/P7W4FhfePHU?si=rCOHYfEI2fV11Dxf"
 
   # ==========================================
   # 05. RandomTowerDefense
@@ -177,7 +189,9 @@ projects:
 
     github: ""
     document: ""
-    video: ""
+    videos:
+      - title: "게임 플레이"
+        url: "https://youtu.be/QWp3GM9WrWY?si=E0IjtNCF05L36SaN"
 
   # ==========================================
   # 06. KirbySurvivors
@@ -208,8 +222,10 @@ projects:
 
     github: ""
     document: ""
-    video: ""
-
+    videos:
+      - title: "게임 플레이"
+        url: "https://youtu.be/sjoyPMjcKE8?si=X-giBfGbA6HpC081"
+    
   # ==========================================
   # 07. BlueStone2 UI Renewal
   # ==========================================
@@ -272,8 +288,11 @@ projects:
 
     github: ""
     document: ""
-    video: "https://youtu.be/bOxOlnFNXUY"
+    videos:
+      - title: "게임 플레이"
+        url: "https://youtu.be/bOxOlnFNXUY?si=gjtqi8qPZM2tZzlW"
 
+   
   # ==========================================
   # 09. RoomEscape
   # ==========================================
@@ -304,7 +323,10 @@ projects:
 
     github: ""
     document: ""
-    video: "https://youtu.be/dJRdAu5pH4c"
+    videos:
+      - title: "게임 플레이"
+        url: "https://youtu.be/dJRdAu5pH4c?si=nL_G82aaWeCLfR0p"
+
 
   # ==========================================
   # 10. MAC - 미세먼지 측정 시스템
