@@ -17,7 +17,7 @@ profile:
     - title: "협업"
       text: "[담당 역할과 팀원들과 함께 문제를 해결한 경험]"
 projects:
-    - id: project-01
+  - id: project-01
     name: "DirectX11, EntityComponentSystem 기반 렌더러"
     category: personal
     featured: false
@@ -36,7 +36,7 @@ projects:
       - "unordered_map 기반 ECS를 Archetype·Chunk 기반으로 개편"
       - "Entity 삭제·이동 과정의 Lookup 불일치 분석 및 갱신 처리 수정"
       - "RenderPass와 정렬 키를 이용한 렌더링 작업 분류 및 배치 구성"
-    github: "https://github.com/계정/저장소"
+    github: "https://github.com/ckdlscjs/c_cpp"
     document: ""
     video: ""
   
