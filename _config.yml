@@ -1,0 +1,20 @@
+repository: ckdlscjs/ckdlscjs.github.io
+url: "https://ckdlscjs.github.io"
+baseurl: ""
+remote_theme: sproogen/modern-resume-theme
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+version: 2
+lang: ko
+name: "Portfolio"
+title: ""
+darkmode: never
+about_title: "준비 중"
+about_content: ""
+content: []
+footer_show_references: false
+sass:
+  style: compressed
+exclude:
+  - README.md
