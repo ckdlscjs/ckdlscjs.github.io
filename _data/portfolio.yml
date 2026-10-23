@@ -17,7 +17,7 @@ profile:
     - title: "협업"
       text: "[담당 역할과 팀원들과 함께 문제를 해결한 경험]"
 projects:
-  - id: dx11-engine
+  - id: project-01
     name: "DirectX11 기반 자체 엔진"
     category: personal
     featured: true
