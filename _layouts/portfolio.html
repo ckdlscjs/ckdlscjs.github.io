@@ -1,78 +1,548 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 {% include head.html %}
 <link rel="stylesheet" href="{{ '/assets/portfolio.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+
 <body class="portfolio-page" id="top">
 {% assign p = site.data.portfolio %}
-<a class="skip-link" href="#projects">프로젝트로 건너뛰기</a>
+
+<a class="skip-link" href="#about">본문으로 건너뛰기</a>
+
+<!-- ========================================
+     Navigation
+======================================== -->
 <header class="site-nav">
   <div class="page-width nav-inner">
-    <a class="brand" href="#top">{{ p.profile.name | escape }}<span>PORTFOLIO</span></a>
+
+    <a class="brand" href="#top">
+      {{ p.profile.name | escape }}
+      <span>PORTFOLIO</span>
+    </a>
+
     <nav aria-label="주요 메뉴">
-      <a href="#about">소개</a><a href="#projects">프로젝트</a><a href="#career">경력</a><a href="#education">교육·활동</a><a href="#contact">연락처</a>
+      <a href="#about">소개</a>
+      <a href="#skills">기술 스택</a>
+      <a href="#projects">프로젝트</a>
+      <a href="#background">교육·활동·경력</a>
+      <a href="#contact">연락처</a>
     </nav>
-    <button class="icon-button theme-toggle" type="button" aria-label="어두운 테마로 전환" title="어두운 테마로 전환"><i class="fas fa-moon" aria-hidden="true"></i></button>
+
+    <button
+      class="icon-button theme-toggle"
+      type="button"
+      aria-label="어두운 테마로 전환"
+      title="어두운 테마로 전환">
+      <i class="fas fa-moon" aria-hidden="true"></i>
+    </button>
+
   </div>
 </header>
+
 <main>
-  <section class="page-width introduction" id="about" aria-labelledby="intro-title">
-    <div class="intro-top"><span class="eyebrow">PORTFOLIO</span><span class="draft-label">작성 중</span></div>
-    <h1 id="intro-title">{{ p.profile.name | escape }}</h1>
-    <p class="role">{{ p.profile.role | escape }}</p>
-    <p class="intro-copy">{{ p.profile.introduction | escape }}</p>
-    <div class="tags">{% for skill in p.profile.skills %}<span>{{ skill | escape }}</span>{% endfor %}</div>
-    <div class="intro-actions">
-      <button class="primary-button" type="button" data-dialog="about-dialog">자기소개 <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
-      <a class="text-link" href="{{ p.profile.github | escape }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
-      {% if p.profile.blog != '' %}<a class="text-link" href="{{ p.profile.blog | escape }}" target="_blank" rel="noopener noreferrer">블로그</a>{% endif %}
-      {% if p.profile.pdf != '' %}<a class="text-link" href="{{ p.profile.pdf | relative_url }}">포트폴리오 PDF</a>{% endif %}
+
+  <!-- ========================================
+       01. 소개
+  ======================================== -->
+  <section
+    class="page-width introduction"
+    id="about"
+    aria-labelledby="intro-title">
+
+    <div class="intro-top">
+      <span class="eyebrow">ABOUT ME</span>
     </div>
-    {% if p.profile.image != '' %}<img class="profile-image" src="{{ p.profile.image | relative_url }}" alt="프로필 사진">{% endif %}
-  </section>
-  <section class="section-band" id="projects" aria-labelledby="projects-title">
-    <div class="page-width">
-      <div class="section-heading"><div><span class="eyebrow">SELECTED WORK</span><h2 id="projects-title">프로젝트</h2></div><span class="item-count" id="project-count" aria-live="polite">{{ p.projects.size }}개 프로젝트</span></div>
-      <div class="filters" role="group" aria-label="프로젝트 분류">
-        <button type="button" data-filter="all" aria-pressed="true">전체</button><button type="button" data-filter="featured" aria-pressed="false">대표</button><button type="button" data-filter="team" aria-pressed="false">팀</button><button type="button" data-filter="personal" aria-pressed="false">개인</button>
+
+    <div class="intro-layout">
+
+      <div class="intro-content">
+        <h1 id="intro-title">
+          {{ p.profile.name | escape }}
+        </h1>
+
+        <p class="role">
+          {{ p.profile.role | escape }}
+        </p>
+
+        <p class="intro-copy">
+          {{ p.profile.introduction | escape }}
+        </p>
+
+        <div class="intro-actions">
+
+          <button
+            class="primary-button"
+            type="button"
+            data-dialog="about-dialog">
+            자기소개
+            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </button>
+
+          {% if p.profile.github != '' %}
+          <a
+            class="text-link"
+            href="{{ p.profile.github | escape }}"
+            target="_blank"
+            rel="noopener noreferrer">
+            <i class="fab fa-github" aria-hidden="true"></i>
+            GitHub
+          </a>
+          {% endif %}
+
+          {% if p.profile.blog != '' %}
+          <a
+            class="text-link"
+            href="{{ p.profile.blog | escape }}"
+            target="_blank"
+            rel="noopener noreferrer">
+            블로그
+          </a>
+          {% endif %}
+
+          {% if p.profile.pdf != '' %}
+          <a
+            class="text-link"
+            href="{{ p.profile.pdf | relative_url }}">
+            포트폴리오 PDF
+          </a>
+          {% endif %}
+
+        </div>
       </div>
+
+      {% if p.profile.image != '' %}
+      <img
+        class="profile-image"
+        src="{{ p.profile.image | relative_url }}"
+        alt="{{ p.profile.name | escape }} 프로필 사진">
+      {% endif %}
+
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       02. 기술 스택
+  ======================================== -->
+  <section
+    class="section-band"
+    id="skills"
+    aria-labelledby="skills-title">
+
+    <div class="page-width">
+
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">TECHNICAL SKILLS</span>
+          <h2 id="skills-title">기술 스택</h2>
+        </div>
+      </div>
+
+      <p class="skills-description">
+        게임 클라이언트 및 렌더링 시스템 개발에
+        활용한 주요 기술입니다.
+      </p>
+
+      <div class="tags skill-tags">
+        {% for skill in p.profile.skills %}
+        <span>{{ skill | escape }}</span>
+        {% endfor %}
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       03. 프로젝트
+  ======================================== -->
+  <section
+    class="projects-section"
+    id="projects"
+    aria-labelledby="projects-title">
+
+    <div class="page-width">
+
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">PROJECTS</span>
+          <h2 id="projects-title">프로젝트</h2>
+        </div>
+
+        <span
+          class="item-count"
+          id="project-count"
+          aria-live="polite">
+          {{ p.projects.size }}개 프로젝트
+        </span>
+      </div>
+
+      <!-- 전체 / 팀 / 개인 필터 -->
+      <div
+        class="filters"
+        role="group"
+        aria-label="프로젝트 분류">
+
+        <button
+          type="button"
+          data-filter="all"
+          aria-pressed="true">
+          전체
+        </button>
+
+        <button
+          type="button"
+          data-filter="team"
+          aria-pressed="false">
+          팀
+        </button>
+
+        <button
+          type="button"
+          data-filter="personal"
+          aria-pressed="false">
+          개인
+        </button>
+
+      </div>
+
+      <!-- 프로젝트 목록 -->
       <div class="project-grid">
-      {% for project in p.projects %}
-        <article class="project-card" data-category="{{ project.category }}" data-featured="{{ project.featured }}">
+
+        {% for project in p.projects %}
+
+        <article
+          class="project-card"
+          data-category="{{ project.category | escape }}">
+
+          <!-- 프로젝트 이미지 -->
           <div class="project-media">
-          {% if project.image != '' %}<img src="{{ project.image | relative_url }}" alt="{{ project.name | escape }} 대표 화면" loading="lazy">
-          {% else %}<div class="image-placeholder"><i class="far fa-image" aria-hidden="true"></i><span>대표 이미지</span></div>{% endif %}
-          </div>
-          <div class="project-body">
-            <div class="project-labels"><span>{{ project.technology | escape }}</span><span>{% if project.category == 'team' %}팀{% else %}개인{% endif %}</span>{% if project.featured %}<span class="featured-label">대표</span>{% endif %}</div>
-            <h3>{{ project.name | escape }}</h3>
-            <p class="project-meta">{{ project.period | escape }}<br>{{ project.role | escape }}</p>
-            <p class="project-summary">{{ project.summary | escape }}</p>
-            <ul class="project-highlights">{% for item in project.highlights %}<li>{{ item | escape }}</li>{% endfor %}</ul>
-            <div class="project-links">
-              {% if project.github != '' %}<a href="{{ project.github | escape }}" target="_blank" rel="noopener noreferrer">GitHub <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>{% endif %}
-              {% if project.document != '' %}<a href="{{ project.document | escape }}" target="_blank" rel="noopener noreferrer">기술 문서</a>{% endif %}
-              {% if project.video != '' %}<a href="{{ project.video | escape }}" target="_blank" rel="noopener noreferrer">시연 영상</a>{% endif %}
+
+            {% if project.image != '' %}
+
+            <img
+              src="{{ project.image | relative_url }}"
+              alt="{{ project.name | escape }} 프로젝트 화면"
+              loading="lazy">
+
+            {% else %}
+
+            <div class="image-placeholder">
+              <i class="far fa-image" aria-hidden="true"></i>
+              <span>프로젝트 이미지</span>
             </div>
+
+            {% endif %}
+
+          </div>
+
+          <!-- 프로젝트 설명 -->
+          <div class="project-body">
+
+            <div class="project-labels">
+
+              <span>
+                {{ project.technology | escape }}
+              </span>
+
+              <span class="category-label">
+                {% if project.category == 'team' %}
+                  팀 프로젝트
+                {% else %}
+                  개인 프로젝트
+                {% endif %}
+              </span>
+
+            </div>
+
+            <h3>{{ project.name | escape }}</h3>
+
+            <p class="project-meta">
+              {{ project.period | escape }}
+              <br>
+              {{ project.role | escape }}
+            </p>
+
+            <p class="project-summary">
+              {{ project.summary | escape }}
+            </p>
+
+            {% if project.highlights.size > 0 %}
+            <ul class="project-highlights">
+              {% for item in project.highlights %}
+              <li>{{ item | escape }}</li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+
+            <!-- GitHub / 문서 / 영상 -->
+            <div class="project-links">
+
+              {% if project.github != '' %}
+              <a
+                href="{{ project.github | escape }}"
+                target="_blank"
+                rel="noopener noreferrer">
+                GitHub
+                <i class="fas fa-external-link-alt"
+                   aria-hidden="true"></i>
+              </a>
+              {% endif %}
+
+              {% if project.document != '' %}
+              <a
+                href="{{ project.document | escape }}"
+                target="_blank"
+                rel="noopener noreferrer">
+                기술 문서
+                <i class="fas fa-external-link-alt"
+                   aria-hidden="true"></i>
+              </a>
+              {% endif %}
+
+              {% if project.video != '' %}
+              <a
+                href="{{ project.video | escape }}"
+                target="_blank"
+                rel="noopener noreferrer">
+                시연 영상
+                <i class="fas fa-external-link-alt"
+                   aria-hidden="true"></i>
+              </a>
+              {% endif %}
+
+            </div>
+
           </div>
         </article>
-      {% endfor %}
+
+        {% endfor %}
+
       </div>
     </div>
   </section>
-  <section class="page-width resume-section" id="career" aria-labelledby="career-title">
-    <div class="section-heading"><div><span class="eyebrow">EXPERIENCE</span><h2 id="career-title">경력</h2></div></div>
-    {% for item in p.career %}<div class="resume-row"><p class="period">{{ item.period | escape }}</p><div><h3>{{ item.title | escape }}</h3><p>{{ item.description | escape }}</p></div></div>{% endfor %}
-  </section>
-  <section class="section-band" id="education" aria-labelledby="education-title">
-    <div class="page-width"><div class="section-heading"><div><span class="eyebrow">BACKGROUND</span><h2 id="education-title">교육 · 활동</h2></div></div>
-      <div class="background-grid"><div><h3 class="column-heading">학력 · 교육</h3>{% for item in p.education %}<div class="background-item"><p class="period">{{ item.period | escape }}</p><h4>{{ item.title | escape }}</h4><p>{{ item.description | escape }}</p></div>{% endfor %}</div>
-      <div><h3 class="column-heading">수상 · 활동</h3>{% for item in p.awards %}<div class="background-item"><p class="period">{{ item.period | escape }}</p><h4>{{ item.title | escape }}</h4><p>{{ item.description | escape }}</p>{% if item.url != '' %}<a class="text-link" href="{{ item.url | escape }}" target="_blank" rel="noopener noreferrer">관련 자료 <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>{% endif %}</div>{% endfor %}</div></div>
+
+
+  <!-- ========================================
+       04. 교육 / 활동 / 경력
+  ======================================== -->
+  <section
+    class="section-band background-section"
+    id="background"
+    aria-labelledby="background-title">
+
+    <div class="page-width">
+
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">BACKGROUND & EXPERIENCE</span>
+          <h2 id="background-title">
+            교육 · 활동 · 경력
+          </h2>
+        </div>
+      </div>
+
+      <div class="background-unified">
+
+        <!-- 학력 및 교육 -->
+        {% if p.education.size > 0 %}
+        <div class="background-group">
+
+          <h3 class="column-heading">학력 및 교육</h3>
+
+          {% for item in p.education %}
+
+          <div class="resume-row">
+            <p class="period">
+              {{ item.period | escape }}
+            </p>
+
+            <div>
+              <h4>{{ item.title | escape }}</h4>
+              <p>{{ item.description | escape }}</p>
+            </div>
+          </div>
+
+          {% endfor %}
+        </div>
+        {% endif %}
+
+
+        <!-- 활동 및 자격 -->
+        {% if p.awards.size > 0 %}
+        <div class="background-group">
+
+          <h3 class="column-heading">활동 및 자격</h3>
+
+          {% for item in p.awards %}
+
+          <div class="resume-row">
+            <p class="period">
+              {{ item.period | escape }}
+            </p>
+
+            <div>
+              <h4>{{ item.title | escape }}</h4>
+              <p>{{ item.description | escape }}</p>
+
+              {% if item.url != '' %}
+              <a
+                class="text-link"
+                href="{{ item.url | escape }}"
+                target="_blank"
+                rel="noopener noreferrer">
+                관련 자료
+              </a>
+              {% endif %}
+
+            </div>
+          </div>
+
+          {% endfor %}
+        </div>
+        {% endif %}
+
+
+        <!-- 경력 -->
+        {% if p.career.size > 0 %}
+        <div class="background-group">
+
+          <h3 class="column-heading">경력</h3>
+
+          {% for item in p.career %}
+
+          <div class="resume-row">
+            <p class="period">
+              {{ item.period | escape }}
+            </p>
+
+            <div>
+              <h4>{{ item.title | escape }}</h4>
+              <p>{{ item.description | escape }}</p>
+            </div>
+          </div>
+
+          {% endfor %}
+        </div>
+        {% endif %}
+
+      </div>
     </div>
   </section>
-  <section class="page-width contact-section" id="contact" aria-labelledby="contact-title"><span class="eyebrow">CONTACT</span><h2 id="contact-title">연락처</h2><div class="contact-links">{% if p.profile.email != '' %}<a href="mailto:{{ p.profile.email | escape }}">{{ p.profile.email | escape }}</a>{% else %}<span class="muted">[이메일]</span>{% endif %}<a href="{{ p.profile.github | escape }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a></div></section>
+
+
+  <!-- ========================================
+       05. 연락처
+  ======================================== -->
+  <section
+    class="page-width contact-section"
+    id="contact"
+    aria-labelledby="contact-title">
+
+    <span class="eyebrow">CONTACT</span>
+
+    <h2 id="contact-title">연락처</h2>
+
+    <p class="contact-description">
+      프로젝트와 개발 경험에 관한 문의는
+      아래 연락처를 이용해 주세요.
+    </p>
+
+    <div class="contact-links">
+
+      {% if p.profile.email != '' %}
+      <a href="mailto:{{ p.profile.email | escape }}">
+        <i class="fas fa-envelope" aria-hidden="true"></i>
+        {{ p.profile.email | escape }}
+      </a>
+      {% endif %}
+
+      {% if p.profile.github != '' %}
+      <a
+        href="{{ p.profile.github | escape }}"
+        target="_blank"
+        rel="noopener noreferrer">
+        <i class="fab fa-github" aria-hidden="true"></i>
+        GitHub
+      </a>
+      {% endif %}
+
+      {% if p.profile.blog != '' %}
+      <a
+        href="{{ p.profile.blog | escape }}"
+        target="_blank"
+        rel="noopener noreferrer">
+        <i class="fas fa-blog" aria-hidden="true"></i>
+        기술 블로그
+      </a>
+      {% endif %}
+
+    </div>
+  </section>
+
 </main>
-<footer class="page-width site-footer"><span>{{ p.profile.name | escape }} · Portfolio</span><a href="#top">맨 위로 <i class="fas fa-arrow-up" aria-hidden="true"></i></a></footer>
-<dialog id="about-dialog" class="detail-dialog" aria-labelledby="about-dialog-title"><div class="dialog-header"><h2 id="about-dialog-title">자기소개</h2><button type="button" class="icon-button" data-close aria-label="닫기" title="닫기"><i class="fas fa-times" aria-hidden="true"></i></button></div><div class="dialog-body">{% for item in p.profile.about %}<h3>{{ item.title | escape }}</h3><div class="prose">{{ item.text | markdownify }}</div>{% endfor %}</div></dialog>
-<script src="{{ '/assets/portfolio.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
+
+
+<!-- ========================================
+     Footer
+======================================== -->
+<footer class="page-width site-footer">
+
+  <span>
+    {{ p.profile.name | escape }} · Portfolio
+  </span>
+
+  <a href="#top">
+    맨 위로
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+  </a>
+
+</footer>
+
+
+<!-- ========================================
+     자기소개 팝업
+======================================== -->
+<dialog
+  id="about-dialog"
+  class="detail-dialog"
+  aria-labelledby="about-dialog-title">
+
+  <div class="dialog-header">
+
+    <h2 id="about-dialog-title">자기소개</h2>
+
+    <button
+      type="button"
+      class="icon-button"
+      data-close
+      aria-label="닫기"
+      title="닫기">
+      <i class="fas fa-times" aria-hidden="true"></i>
+    </button>
+
+  </div>
+
+  <div class="dialog-body">
+
+    {% for item in p.profile.about %}
+
+    <h3>{{ item.title | escape }}</h3>
+
+    <div class="prose">
+      {{ item.text | markdownify }}
+    </div>
+
+    {% endfor %}
+
+  </div>
+
+</dialog>
+
+<script
+  src="{{ '/assets/portfolio.js' | relative_url }}?v={{ site.time | date: '%s' }}"
+  defer>
+</script>
+
 </body>
 </html>
