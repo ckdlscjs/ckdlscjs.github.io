@@ -1,5 +1,4 @@
 
-
 # ==========================================
 # PROFILE
 # ==========================================
@@ -8,7 +7,6 @@ profile:
   role: "게임 클라이언트 프로그래머"
   introduction: ""
 
-  # 소개 영역 하단에 표시할 기술 스택
   skills:
     - "C++"
     - "Algorithms & Data Structures"
@@ -16,7 +14,7 @@ profile:
     - "Computer Graphics"
     - "Unreal Engine"
 
-  image: "/assets/images/profile.png"
+  image: ""
   email: "syl610@naver.com"
   github: "https://github.com/ckdlscjs"
   blog: "https://blog.naver.com/syl610"
@@ -24,7 +22,6 @@ profile:
 
   # 자기소개는 추후 작성
   about: []
-
 
 
 # ==========================================
@@ -53,15 +50,14 @@ projects:
       개념 이해부터 코드 구현과 검증까지
       지속적으로 학습 내용을 정리하고 있습니다.
 
-    highlights:
-      - "게임 수학 — 벡터, 행렬, 좌표계 및 게임 개발 관련 수학 개념 학습"
-      - "컴퓨터 그래픽스 — DirectX11 렌더링 파이프라인 및 HLSL 학습"
-      - "PardCode — C++ 및 그래픽스 예제 구현과 구조 분석"
-      - "알고리즘 — 백준 문제 풀이와 시간·공간 복잡도 분석"
-      - "자료구조 — STL 컨테이너 및 문제 유형별 자료구조 활용"
-      - "문제 복기 — 오답 원인, 반례 분석 및 풀이 개선 과정 정리"
+    # highlights:
+    #   - "게임 수학 — 벡터, 행렬, 좌표계 및 게임 개발 관련 수학 개념 학습"
+    #   - "컴퓨터 그래픽스 — DirectX11 렌더링 파이프라인 및 HLSL 학습"
+    #   - "PardCode — C++ 및 그래픽스 예제 구현과 구조 분석"
+    #   - "알고리즘 — 백준 문제 풀이와 시간·공간 복잡도 분석"
+    #   - "자료구조 — STL 컨테이너 및 문제 유형별 자료구조 활용"
+    #   - "문제 복기 — 오답 원인, 반례 분석 및 풀이 개선 과정 정리"
 
-    
     github: ""
     document: ""
     links:
@@ -72,7 +68,6 @@ projects:
       - title: "백준 풀이 GitHub"
         url: "https://github.com/ckdlscjs/AlgorithmRepo"
     videos: []
-
 
 
   # ==========================================
@@ -96,12 +91,12 @@ projects:
       리소스 관리부터 충돌·피킹, 렌더패스 및
       인스턴싱 배치 처리까지 단계적으로 구조를 개선했습니다.
 
-    highlights:
-      - "엔진 아키텍처 및 리소스 시스템 — CRTP 기반 시스템 관리, RAII 및 D3D11 Wrapper, FNV-1a 해시 기반 리소스 캐싱"
-      - "DOD 기반 ECS — Archetype/Bitset, 16KB Chunk, Sparse/Dense Lookup 및 Swap & Pop 기반 엔티티 관리"
-      - "Render Queue 최적화 — 64비트 정렬 키 기반 렌더패스 분류, Instancing 배칭, XOR 비교를 활용한 Lazy Binding"
-      - "그래픽스 파이프라인 — Deferred Shading(MRT/G-Buffer), PCF Shadow Mapping, Cubemap 및 Outline Pass"
-      - "가시성 및 충돌 처리 — Frustum Culling, 경계 볼륨 판정, Compute Shader 기반 스키닝 및 Triangle Picking"
+    # highlights:
+    #   - "엔진 아키텍처 및 리소스 시스템 — CRTP 기반 시스템 관리, RAII 및 D3D11 Wrapper, FNV-1a 해시 기반 리소스 캐싱"
+    #   - "DOD 기반 ECS — Archetype/Bitset, 16KB Chunk, Sparse/Dense Lookup 및 Swap & Pop 기반 엔티티 관리"
+    #   - "Render Queue 최적화 — 64비트 정렬 키 기반 렌더패스 분류, Instancing 배칭, XOR 비교를 활용한 Lazy Binding"
+    #   - "그래픽스 파이프라인 — Deferred Shading(MRT/G-Buffer), PCF Shadow Mapping, Cubemap 및 Outline Pass"
+    #   - "가시성 및 충돌 처리 — Frustum Culling, 경계 볼륨 판정, Compute Shader 기반 스키닝 및 Triangle Picking"
 
     github: "https://github.com/ckdlscjs/c_cpp"
     document: ""
@@ -128,12 +123,12 @@ projects:
       게임 내 카메라, UI 및 미니맵 시스템을 담당했으며,
       공간 분할과 인스턴싱을 활용해 렌더링 효율을 개선했습니다.
 
-    highlights:
-      - "DX11 렌더링 프레임워크 — 엔진 생명주기 관리, FBX SDK 기반 에셋 파싱 및 리소스 캐싱"
-      - "MapTool 및 지형 편집 — Quadtree 기반 공간 분할, Sculpting, RGBA 마스크 기반 4중 Splatting"
-      - "맵 데이터 파이프라인 — 에셋·충돌체·스폰 포인트·카메라 경로의 직렬화 및 게임 클라이언트 역직렬화"
-      - "렌더링 최적화 — Frustum Culling, Foliage Instancing 및 DrawIndexedInstanced 기반 식생 배치"
-      - "게임 클라이언트 시스템 — SpringArm 카메라 충돌 회피, Bezier/Perlin Noise 연출, 계층형 UI 및 RTT 미니맵"
+    # highlights:
+    #   - "DX11 렌더링 프레임워크 — 엔진 생명주기 관리, FBX SDK 기반 에셋 파싱 및 리소스 캐싱"
+    #   - "MapTool 및 지형 편집 — Quadtree 기반 공간 분할, Sculpting, RGBA 마스크 기반 4중 Splatting"
+    #   - "맵 데이터 파이프라인 — 에셋·충돌체·스폰 포인트·카메라 경로의 직렬화 및 게임 클라이언트 역직렬화"
+    #   - "렌더링 최적화 — Frustum Culling, Foliage Instancing 및 DrawIndexedInstanced 기반 식생 배치"
+    #   - "게임 클라이언트 시스템 — SpringArm 카메라 충돌 회피, Bezier/Perlin Noise 연출, 계층형 UI 및 RTT 미니맵"
 
     github: "https://github.com/ckdlscjs/TeamProject"
     document: ""
@@ -167,12 +162,12 @@ projects:
       포스트 프로세싱을 이용한 시각 효과와
       미니맵·카메라 연출을 구성했습니다.
 
-    highlights:
-      - "멀티플레이 상태 동기화 — IOCP 서버 패킷 연동, GameMode 기반 액터 상태 갱신 및 Transform 보간"
-      - "AI 행동 시스템 — BehaviorTree/Blackboard, AI Perception, EQS 기반 엄폐 위치 탐색 및 Spline 경로 이동"
-      - "게임 레벨 및 상호작용 — Landscape, 적 스폰 시스템, 자기장 축소, 수풀 및 아이템 상호작용"
-      - "그래픽스 및 시각 효과 — CustomDepth/Stencil 기반 Sobel Outline, Dissolve Material 및 시야 안개"
-      - "카메라·협업 시스템 — SceneCapture2D 미니맵, Cinematic Camera 및 Perforce(P4D) 협업 환경 구축"
+    # highlights:
+    #   - "멀티플레이 상태 동기화 — IOCP 서버 패킷 연동, GameMode 기반 액터 상태 갱신 및 Transform 보간"
+    #   - "AI 행동 시스템 — BehaviorTree/Blackboard, AI Perception, EQS 기반 엄폐 위치 탐색 및 Spline 경로 이동"
+    #   - "게임 레벨 및 상호작용 — Landscape, 적 스폰 시스템, 자기장 축소, 수풀 및 아이템 상호작용"
+    #   - "그래픽스 및 시각 효과 — CustomDepth/Stencil 기반 Sobel Outline, Dissolve Material 및 시야 안개"
+    #   - "카메라·협업 시스템 — SceneCapture2D 미니맵, Cinematic Camera 및 Perforce(P4D) 협업 환경 구축"
 
     github: "https://github.com/ckdlscjs/BattleFront"
     document: ""
@@ -201,12 +196,12 @@ projects:
       UI 및 이펙트 시스템, 보스 행동 패턴,
       NPC와 시네마틱 연출을 담당했습니다.
 
-    highlights:
-      - "UI 시스템 — UMG 기반 HP/Stasis 게이지, 탄약 정보, 조준점 및 인벤토리 인터페이스 구현"
-      - "동적 머티리얼 — MaterialInstanceDynamic을 활용한 캐릭터 상태 및 게이지 표현"
-      - "보스 AI — FSM 기반 보스 행동 설계, Projectile/Laser/Radial Attack 패턴 및 충돌 데미지 처리"
-      - "이펙트 시스템 — Niagara 조준점, Stasis/Dissolve Material 및 Cascade 파티클 연출"
-      - "NPC 및 게임 흐름 — NPC 캐릭터 구성, 시네마틱 카메라 및 Text UMG 연동"
+    # highlights:
+    #   - "UI 시스템 — UMG 기반 HP/Stasis 게이지, 탄약 정보, 조준점 및 인벤토리 인터페이스 구현"
+    #   - "동적 머티리얼 — MaterialInstanceDynamic을 활용한 캐릭터 상태 및 게이지 표현"
+    #   - "보스 AI — FSM 기반 보스 행동 설계, Projectile/Laser/Radial Attack 패턴 및 충돌 데미지 처리"
+    #   - "이펙트 시스템 — Niagara 조준점, Stasis/Dissolve Material 및 Cascade 파티클 연출"
+    #   - "NPC 및 게임 흐름 — NPC 캐릭터 구성, 시네마틱 카메라 및 Text UMG 연동"
 
     github: ""
     document: ""
@@ -238,12 +233,12 @@ projects:
       타워와 적의 상속 구조, 공격 대상 탐색,
       웨이브 시스템 및 UI를 구현했습니다.
 
-    highlights:
-      - "타워 시스템 — 등급별 클래스 상속, 랜덤 타워 생성, 업그레이드 및 판매 기능"
-      - "타겟팅 및 공격 — Range Collider 기반 적 탐색, 우선순위 판별 및 공격 대상 실시간 갱신"
-      - "웨이브 시스템 — DataTable 기반 적 종류 및 웨이브 구성, TargetPoint 경로 이동"
-      - "게임 진행 — Life 감소, 승리 조건, GameMode 기반 게임 흐름 제어"
-      - "UI 및 연출 — UMG 기반 타워 관리·웨이브 정보, Animation Blueprint 및 Cascade Effect 활용"
+    # highlights:
+    #   - "타워 시스템 — 등급별 클래스 상속, 랜덤 타워 생성, 업그레이드 및 판매 기능"
+    #   - "타겟팅 및 공격 — Range Collider 기반 적 탐색, 우선순위 판별 및 공격 대상 실시간 갱신"
+    #   - "웨이브 시스템 — DataTable 기반 적 종류 및 웨이브 구성, TargetPoint 경로 이동"
+    #   - "게임 진행 — Life 감소, 승리 조건, GameMode 기반 게임 흐름 제어"
+    #   - "UI 및 연출 — UMG 기반 타워 관리·웨이브 정보, Animation Blueprint 및 Cascade Effect 활용"
 
     github: ""
     document: ""
@@ -272,12 +267,12 @@ projects:
       무한 스크롤 맵, 스프라이트 애니메이션,
       투사체 시스템, 충돌 판정 및 오브젝트 풀링을 구현했습니다.
 
-    highlights:
-      - "무한 맵 — 9개 타일의 상대 위치 재배치를 활용한 반복형 월드 구성"
-      - "2D 렌더링 — UV 좌표 및 프레임 단위 Sprite 애니메이션 시스템"
-      - "투사체 시스템 — 삼각함수와 벡터 연산을 이용한 직선·반사·회전형 공격 구현"
-      - "오브젝트 관리 — Singleton 기반 ObjectManager 및 Object Pooling을 통한 투사체 재사용"
-      - "충돌 및 UI — Box Collision, 충돌 방향 벡터 처리, 셰이더 색상 변조 및 게이지·버튼 UI"
+    # highlights:
+    #   - "무한 맵 — 9개 타일의 상대 위치 재배치를 활용한 반복형 월드 구성"
+    #   - "2D 렌더링 — UV 좌표 및 프레임 단위 Sprite 애니메이션 시스템"
+    #   - "투사체 시스템 — 삼각함수와 벡터 연산을 이용한 직선·반사·회전형 공격 구현"
+    #   - "오브젝트 관리 — Singleton 기반 ObjectManager 및 Object Pooling을 통한 투사체 재사용"
+    #   - "충돌 및 UI — Box Collision, 충돌 방향 벡터 처리, 셰이더 색상 변조 및 게이지·버튼 UI"
 
     github: ""
     document: ""
@@ -306,12 +301,12 @@ projects:
       VIP 등급 정보 화면과 출석 보상 UI를 개선하고,
       길드 연료 지원 기능의 오류를 수정했습니다.
 
-    highlights:
-      - "VIP 페이지 리뉴얼 — 회원 등급과 과금 혜택을 표시하는 TableView 기반 UI 구성"
-      - "UI 상호작용 — 등급별 정보 노드 배치 및 드래그 기반 화면 탐색 구현"
-      - "출석 보상 시스템 — 일일·주간 출석 UI와 애니메이션 리뉴얼, 서버 보상 정보 연동"
-      - "길드 지원 시스템 — 길드원 간 연료(피로도) 지급 기능의 버그 수정"
-      - "실무 개발 경험 — 상용 게임 클라이언트의 기존 코드 분석 및 자체 엔진 API 활용"
+    # highlights:
+    #   - "VIP 페이지 리뉴얼 — 회원 등급과 과금 혜택을 표시하는 TableView 기반 UI 구성"
+    #   - "UI 상호작용 — 등급별 정보 노드 배치 및 드래그 기반 화면 탐색 구현"
+    #   - "출석 보상 시스템 — 일일·주간 출석 UI와 애니메이션 리뉴얼, 서버 보상 정보 연동"
+    #   - "길드 지원 시스템 — 길드원 간 연료(피로도) 지급 기능의 버그 수정"
+    #   - "실무 개발 경험 — 상용 게임 클라이언트의 기존 코드 분석 및 자체 엔진 API 활용"
 
     github: ""
     document: ""
@@ -339,12 +334,12 @@ projects:
       오브젝트 풀링을 활용하여 반복 생성되는
       투사체를 관리했습니다.
 
-    highlights:
-      - "보스 행동 시스템 — FSM 기반 이동·공격 패턴, 체력 및 상태에 따른 행동 변경"
-      - "탄막 시스템 — 직선·부채꼴·원형·회전형 및 Bezier Curve 기반 곡선 투사체 구현"
-      - "오브젝트 풀링 — Singleton Spawner와 Prefab Pool을 활용한 투사체 생성 및 재사용"
-      - "일반 몬스터 — SpawnPoint 기반 생성, 공격 범위 판별 및 상태별 이동·공격 처리"
-      - "맵 및 UI — NavMesh 기반 경로 이동, 충돌체 구성, 폭탄 아이템 및 게임 결과 UI 관리"
+    # highlights:
+    #   - "보스 행동 시스템 — FSM 기반 이동·공격 패턴, 체력 및 상태에 따른 행동 변경"
+    #   - "탄막 시스템 — 직선·부채꼴·원형·회전형 및 Bezier Curve 기반 곡선 투사체 구현"
+    #   - "오브젝트 풀링 — Singleton Spawner와 Prefab Pool을 활용한 투사체 생성 및 재사용"
+    #   - "일반 몬스터 — SpawnPoint 기반 생성, 공격 범위 판별 및 상태별 이동·공격 처리"
+    #   - "맵 및 UI — NavMesh 기반 경로 이동, 충돌체 구성, 폭탄 아이템 및 게임 결과 UI 관리"
 
     github: ""
     document: ""
@@ -377,12 +372,12 @@ projects:
       Activity 및 Layout 구조 설계와
       화면 UI 및 이미지 리소스 구성을 담당했습니다.
 
-    highlights:
-      - "Activity 시스템 — 화면 전환 및 Activity 생명주기 관리"
-      - "UI 레이아웃 — ImageView, Button 등을 활용한 화면 구성과 입력 처리"
-      - "아이템 시스템 — ListView 기반 보유 아이템 확인 및 사용 인터페이스"
-      - "상호작용 — 이미지 클릭 및 상태 변화에 따른 퍼즐 진행, Toast 메시지 출력"
-      - "화면 연출 — Custom Dialog 기반 확대 화면, 이미지 상태 변화 및 사운드 적용"
+    # highlights:
+    #   - "Activity 시스템 — 화면 전환 및 Activity 생명주기 관리"
+    #   - "UI 레이아웃 — ImageView, Button 등을 활용한 화면 구성과 입력 처리"
+    #   - "아이템 시스템 — ListView 기반 보유 아이템 확인 및 사용 인터페이스"
+    #   - "상호작용 — 이미지 클릭 및 상태 변화에 따른 퍼즐 진행, Toast 메시지 출력"
+    #   - "화면 연출 — Custom Dialog 기반 확대 화면, 이미지 상태 변화 및 사운드 적용"
 
     github: ""
     document: ""
@@ -412,12 +407,12 @@ projects:
       시각화했습니다. 측정값에 따른 공기청정 팬의
       자동·수동 제어 기능을 구현했습니다.
 
-    highlights:
-      - "임베디드 시스템 — Arduino Uno, 먼지 센서, Bluetooth 모듈 및 팬 제어 회로 구성"
-      - "무선 통신 — Bluetooth 기반 센서 데이터 송수신 및 기기 제어"
-      - "데이터 관리 — SQLite 기반 측정값 저장·조회 및 데이터 처리"
-      - "통계 시각화 — MPAndroidChart를 활용한 일별·시간별 측정 그래프"
-      - "제어 시스템 — 미세먼지 수치에 따른 팬 자동 On/Off 및 수동 제어, LCD 실시간 출력"
+    # highlights:
+    #   - "임베디드 시스템 — Arduino Uno, 먼지 센서, Bluetooth 모듈 및 팬 제어 회로 구성"
+    #   - "무선 통신 — Bluetooth 기반 센서 데이터 송수신 및 기기 제어"
+    #   - "데이터 관리 — SQLite 기반 측정값 저장·조회 및 데이터 처리"
+    #   - "통계 시각화 — MPAndroidChart를 활용한 일별·시간별 측정 그래프"
+    #   - "제어 시스템 — 미세먼지 수치에 따른 팬 자동 On/Off 및 수동 제어, LCD 실시간 출력"
 
     github: ""
     document: ""
@@ -445,12 +440,12 @@ projects:
       기상청 API를 이용한 날씨·습도 정보 표시 기능도
       구성했습니다.
 
-    highlights:
-      - "데이터베이스 — SQLite 기반 섭취 기록 저장 및 조회 구조 설계"
-      - "일일 기록 — ListView를 활용한 날짜별 수분 섭취 내역 표시"
-      - "목표 관리 — 사용자 목표 섭취량 대비 현재 섭취량의 시각적 표현"
-      - "통계 기능 — MPAndroidChart 기반 날짜별 섭취량 및 평균값 그래프"
-      - "외부 데이터 연동 — 기상청 API를 활용한 날씨 및 습도 정보 표시"
+    # highlights:
+    #   - "데이터베이스 — SQLite 기반 섭취 기록 저장 및 조회 구조 설계"
+    #   - "일일 기록 — ListView를 활용한 날짜별 수분 섭취 내역 표시"
+    #   - "목표 관리 — 사용자 목표 섭취량 대비 현재 섭취량의 시각적 표현"
+    #   - "통계 기능 — MPAndroidChart 기반 날짜별 섭취량 및 평균값 그래프"
+    #   - "외부 데이터 연동 — 기상청 API를 활용한 날씨 및 습도 정보 표시"
 
     github: ""
     document: ""
