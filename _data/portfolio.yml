@@ -23,7 +23,7 @@ projects:
     featured: true
     technology: "[C++17, DirectX11, Assimp, ImGui]"
     period: "[2025.05 ~ 2026.05]"
-    role: "[개인프로젝트]"
+    
     image: ""
     summary: "[어떤 결과물인지, 본인이 맡은 범위와 주요 구현 결과를 한 단락으로 작성]"
     highlights: ["[핵심 문제 해결 01]", "[핵심 문제 해결 02]"]
