@@ -17,7 +17,7 @@ profile:
     - title: "협업"
       text: "[담당 역할과 팀원들과 함께 문제를 해결한 경험]"
 projects:
-  - id: project-01
+    - id: project-01
     name: "DirectX11, EntityComponentSystem 기반 렌더러"
     category: personal
     featured: false
@@ -36,23 +36,10 @@ projects:
       - "unordered_map 기반 ECS를 Archetype·Chunk 기반으로 개편"
       - "Entity 삭제·이동 과정의 Lookup 불일치 분석 및 갱신 처리 수정"
       - "RenderPass와 정렬 키를 이용한 렌더링 작업 분류 및 배치 구성"
-    details: |
-      ### 개발 목적
-      상용 엔진에서 제공하는 기능의 내부 동작을 이해하기 위해,
-      주요 시스템을 직접 구현하고 연결하는 것을 목표로 개발함.
-
-      ### ECS 구조 개편과 삭제 처리
-      초기 unordered_map 기반 구조를 Archetype·Chunk 기반으로 개편함.
-      Entity 삭제와 SwapAndPop 처리 과정에서 이동된 데이터의 위치와
-      Lookup 정보가 일치하지 않는 문제를 분석하고 갱신 절차를 수정함.
-
-      ### 렌더링 구조
-      Shadow, Opaque, DeferredLighting, Transparent 등의 작업을
-      RenderPass로 분리하고, 정렬 키와 배치 처리 구조를 구성함.
-      Deferred Rendering, 애니메이션, Collision·Picking 등을 구현함.
-    github: ""
+    github: "https://github.com/계정/저장소"
     document: ""
     video: ""
+  
   - id: project-02
     name: "[팀 프로젝트명]"
     category: team
