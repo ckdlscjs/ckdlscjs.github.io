@@ -39,7 +39,6 @@ projects:
     github: "https://github.com/ckdlscjs/c_cpp"
     document: ""
     video: ""
-  
   - id: project-02
     name: "[팀 프로젝트명]"
     category: team
