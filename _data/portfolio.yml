@@ -122,7 +122,7 @@ projects:
 
     github: "https://github.com/ckdlscjs/BattleFront"
     document: ""
-     videos:
+    videos:
       - title: "게임 플레이"
         url: "https://youtu.be/uDiQvUdp6hE?si=5JuZOzHQuRLCWNh_"
     
@@ -157,7 +157,7 @@ projects:
     document: ""
     videos:
       - title: "게임 플레이"
-        url: "https://youtu.be/P7W4FhfePHU?si=rCOHYfEI2fV11Dxf"
+        url: "https://youtu.be/P7W4FhfePHU?si=e5aT_h1pUuKj84YX"
 
   # ==========================================
   # 05. RandomTowerDefense
