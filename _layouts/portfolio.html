@@ -73,7 +73,6 @@
 </main>
 <footer class="page-width site-footer"><span>{{ p.profile.name | escape }} · Portfolio</span><a href="#top">맨 위로 <i class="fas fa-arrow-up" aria-hidden="true"></i></a></footer>
 <dialog id="about-dialog" class="detail-dialog" aria-labelledby="about-dialog-title"><div class="dialog-header"><h2 id="about-dialog-title">자기소개</h2><button type="button" class="icon-button" data-close aria-label="닫기" title="닫기"><i class="fas fa-times" aria-hidden="true"></i></button></div><div class="dialog-body">{% for item in p.profile.about %}<h3>{{ item.title | escape }}</h3><div class="prose">{{ item.text | markdownify }}</div>{% endfor %}</div></dialog>
-{% for project in p.projects %}<dialog id="{{ project.id }}-dialog" class="detail-dialog" aria-labelledby="{{ project.id }}-title"><div class="dialog-header"><h2 id="{{ project.id }}-title">{{ project.name | escape }}</h2><button type="button" class="icon-button" data-close aria-label="닫기" title="닫기"><i class="fas fa-times" aria-hidden="true"></i></button></div><div class="dialog-body"><p class="project-meta">{{ project.period | escape }} · {{ project.role | escape }}</p><div class="prose">{{ project.details | markdownify }}</div></div></dialog>{% endfor %}
 <script src="{{ '/assets/portfolio.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
 </body>
 </html>
