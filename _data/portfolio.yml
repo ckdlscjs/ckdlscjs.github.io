@@ -54,6 +54,7 @@ projects:
       - "문제 복기 — 오답 원인, 반례 및 풀이 개선 과정 기록"
     github: ""
     document: ""
+
     links:
       - title: "알고리즘 문제풀이"
         url: "https://blog.naver.com/syl610/224364009779"
@@ -61,10 +62,9 @@ projects:
         url: "https://blog.naver.com/syl610/224314221774"
       - title: "백준 풀이 GitHub"
         url: "https://github.com/ckdlscjs/AlgorithmRepo"
-      - title: "PardCode 소스"
-        url: "https://github.com/ckdlscjs/c_cpp/tree/main/C_CPP/PardCode26"
       - title: "기술 블로그"
         url: "https://blog.naver.com/syl610"
+
     videos: []
 
   # ==========================================
