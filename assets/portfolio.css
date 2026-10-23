@@ -807,3 +807,100 @@ section[id] {
     padding-block: 20px;
   }
 }
+
+
+/* ========================================
+   Profile Layout - Large Portrait
+======================================== */
+
+/* 소개 영역 */
+.portfolio-page .introduction {
+  padding-top: 85px;
+  padding-bottom: 90px;
+}
+
+/* 텍스트 왼쪽 / 사진 오른쪽 */
+.portfolio-page .intro-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 64px;
+  min-height: 430px;
+}
+
+/* 왼쪽 프로필 정보 */
+.portfolio-page .intro-content {
+  flex: 1 1 60%;
+  min-width: 0;
+}
+
+/* 프로필 이름 */
+.portfolio-page .introduction h1 {
+  font-size: clamp(42px, 5vw, 64px);
+  line-height: 1.2;
+}
+
+/* 직무 */
+.portfolio-page .role {
+  margin-top: 16px !important;
+  font-size: 20px;
+}
+
+/* 소개 링크 */
+.portfolio-page .intro-actions {
+  margin-top: 30px;
+}
+
+/* 기술 스택 */
+.portfolio-page .intro-content .skill-tags {
+  margin-top: 32px;
+}
+
+/* 오른쪽 프로필 사진 */
+.portfolio-page .profile-image {
+  display: block;
+  width: 330px;
+  height: auto;
+  max-width: 40%;
+  max-height: none;
+  aspect-ratio: 3 / 4;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 14px;
+  flex: 0 0 auto;
+}
+
+/* 모바일 / 태블릿 대응 */
+@media (max-width: 768px) {
+  .portfolio-page .introduction {
+    padding-top: 48px;
+    padding-bottom: 56px;
+  }
+
+  .portfolio-page .intro-layout {
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 0;
+    gap: 32px;
+  }
+
+  .portfolio-page .intro-content {
+    width: 100%;
+    flex: none;
+  }
+
+  .portfolio-page .introduction h1 {
+    font-size: 42px;
+  }
+
+  .portfolio-page .profile-image {
+    width: min(330px, 100%);
+    max-width: 100%;
+    height: auto;
+    margin-inline: auto;
+  }
+
+  .portfolio-page .intro-content .skill-tags {
+    margin-top: 24px;
+  }
+}
