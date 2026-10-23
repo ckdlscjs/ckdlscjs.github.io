@@ -1,13 +1,8 @@
-# Edit the text and URLs below. Empty URLs are not rendered as links.
 
 profile:
   name: "이선용"
   role: "게임 클라이언트 프로그래머"
-
-  # 자기소개 문장은 추후 작성
   introduction: ""
-
-  # 기술 스택
   skills:
     - "C++17"
     - "STL"
@@ -16,51 +11,72 @@ profile:
     - "DirectXMath"
     - "ECS / DOD"
     - "Deferred Shading"
-    - "GPU Compute Shader"
+    - "Compute Shader"
     - "Unreal Engine 5"
-    - "Blueprint"
-    - "UMG"
-    - "AI Behavior Tree"
+    - "Blueprint / UMG"
+    - "Behavior Tree / EQS"
     - "ImGui"
     - "Assimp / FBX SDK"
     - "FMOD"
-    - "Git / GitHub"
-    - "Perforce"
-    - "Visual Studio"
-
-  # 프로필 이미지 추후 추가
+    - "Git / Perforce"
   image: ""
-
-  # 연락처 및 외부 링크
   email: "syl610@naver.com"
   github: "https://github.com/ckdlscjs"
   blog: "https://blog.naver.com/syl610"
-
-  # 포트폴리오 PDF 추후 추가
   pdf: ""
-
-  # 자기소개 팝업 내용은 추후 작성
-  about: 
-    - title: "소개"
-      text: "[개발 경험과 관심 분야에 대한 소개]"
-    - title: "문제 해결"
-      text: "[문제 상황, 본인의 판단과 행동, 해결 결과]"
-    - title: "협업"
-      text: "[담당 역할과 팀원들과 함께 문제를 해결한 경험]"
+  about: []
 
 projects:
+
   # ==========================================
-  # 01. DX11 기반 ECS 아키텍처 렌더러
+  # 기술 학습 및 문제 해결 기록
+  # ==========================================
+  - id: project-study
+    name: "기술 학습 및 문제 해결 기록"
+    category: personal
+    technology: "C++ / Mathematics / DirectX11 / Algorithms / Data Structures"
+    period: "지속적인 학습 및 기록"
+    role: "개인 학습 · 기술 블로그 및 GitHub 코드 관리"
+    image: ""
+    summary: >-
+      게임 클라이언트 개발에 필요한 수학, 컴퓨터 그래픽스,
+      알고리즘 및 자료구조를 학습하고 실제 구현 과정과
+      문제 해결 방법을 기록하고 있습니다.
+      이득우 교수님의 수학 학습 자료, PardCode를 활용한
+      렌더링 학습, 백준 알고리즘 풀이와 오답 복기 등을 통해
+      개념 학습부터 코드 구현 및 검증까지 지속적으로 정리하고 있습니다.
+    highlights:
+      - "게임 수학 — 벡터, 행렬, 좌표계 및 게임 개발 관련 수학 개념 학습"
+      - "컴퓨터 그래픽스 — DirectX11 렌더링 파이프라인 및 HLSL 학습"
+      - "PardCode — C++ 및 그래픽스 예제 구현과 구조 분석"
+      - "알고리즘 — 백준 문제 풀이, 시간 복잡도 및 접근 방법 분석"
+      - "자료구조 — STL 컨테이너 및 문제 유형별 자료구조 활용"
+      - "문제 복기 — 오답 원인, 반례 및 풀이 개선 과정 기록"
+    github: ""
+    document: ""
+    links:
+      - title: "알고리즘 문제풀이"
+        url: "https://blog.naver.com/syl610/224364009779"
+      - title: "렌더러 학습 기록"
+        url: "https://blog.naver.com/syl610/224314221774"
+      - title: "백준 풀이 GitHub"
+        url: "https://github.com/ckdlscjs/AlgorithmRepo"
+      - title: "PardCode 소스"
+        url: "https://github.com/ckdlscjs/c_cpp/tree/main/C_CPP/PardCode26"
+      - title: "기술 블로그"
+        url: "https://blog.naver.com/syl610"
+    videos: []
+
+  # ==========================================
+  # 01. DirectX11 ECS Renderer
   # ==========================================
   - id: project-01
     name: "DirectX11 기반 ECS 아키텍처 렌더러"
     category: personal
-    featured: true
     technology: "C++17 / DirectX11 / HLSL / ECS / ImGui"
-    period: "2025.05 ~ 2026.06"
+    period: "2025.05 ~ 진행 중"
     role: "개인 프로젝트 · 엔진 아키텍처 및 렌더링 시스템 전체 설계·구현"
     image: ""
-
     summary: >-
       DirectX11과 C++17을 기반으로 게임 엔진의 핵심 시스템과
       3D 렌더링 파이프라인을 직접 구현한 개인 프로젝트입니다.
@@ -70,17 +86,15 @@ projects:
       64비트 정렬 키 기반 렌더링 파이프라인을 설계했습니다.
       리소스 관리부터 충돌·피킹, 렌더패스 및
       인스턴싱 배치 처리까지 단계적으로 구조를 개선했습니다.
-
     highlights:
       - "엔진 아키텍처 및 리소스 시스템 — CRTP 기반 시스템 관리, RAII 및 D3D11 Wrapper, FNV-1a 해시 기반 리소스 캐싱"
       - "DOD 기반 ECS — Archetype/Bitset, 16KB Chunk, Sparse/Dense Lookup 및 Swap & Pop 기반 엔티티 관리"
       - "Render Queue 최적화 — 64비트 정렬 키 기반 렌더패스 분류, Instancing 배칭, XOR 비교를 활용한 Lazy Binding"
       - "그래픽스 파이프라인 — Deferred Shading(MRT/G-Buffer), PCF Shadow Mapping, Cubemap 및 Outline Pass"
       - "가시성 및 충돌 처리 — Frustum Culling, 경계 볼륨 판정, Compute Shader 기반 스키닝 및 Triangle Picking"
-
     github: "https://github.com/ckdlscjs/c_cpp"
     document: ""
-    video: ""
+    videos: []
 
   # ==========================================
   # 02. LoLShinSouls & MapTool
@@ -88,12 +102,10 @@ projects:
   - id: project-02
     name: "LoLShinSouls & MapTool"
     category: team
-    featured: true
     technology: "C++11 / DirectX11 / HLSL / FBX SDK / FMOD"
     period: "2023.03 ~ 2023.05"
     role: "3인 팀 프로젝트 · 팀장 / MapTool / UI 시스템"
     image: ""
-
     summary: >-
       DirectX11과 C++11 기반 자체 렌더링 프레임워크를 활용하여
       3D 액션 RPG 게임과 전용 맵 에디터를 제작한 팀 프로젝트입니다.
@@ -102,25 +114,19 @@ projects:
       게임 클라이언트에서 복원하도록 구성했습니다.
       게임 내 카메라, UI 및 미니맵 시스템을 담당했으며,
       공간 분할과 인스턴싱을 활용해 렌더링 효율을 개선했습니다.
-
     highlights:
       - "DX11 렌더링 프레임워크 — 엔진 생명주기 관리, FBX SDK 기반 에셋 파싱 및 리소스 캐싱"
       - "MapTool 및 지형 편집 — Quadtree 기반 공간 분할, Sculpting, RGBA 마스크 기반 4중 Splatting"
       - "맵 데이터 파이프라인 — 에셋·충돌체·스폰 포인트·카메라 경로의 직렬화 및 게임 클라이언트 역직렬화"
       - "렌더링 최적화 — Frustum Culling, Foliage Instancing 및 DrawIndexedInstanced 기반 식생 배치"
       - "게임 클라이언트 시스템 — SpringArm 카메라 충돌 회피, Bezier/Perlin Noise 연출, 계층형 UI 및 RTT 미니맵"
-
-    
     github: "https://github.com/ckdlscjs/TeamProject"
     document: ""
-
     videos:
       - title: "게임 플레이"
-        url: "https://youtu.be/4ECHTmTD6h4?si=BDgdIJdVPMMn8hrq"
-
+        url: "https://youtu.be/P7W4FhfePHU"
       - title: "MapTool 시연"
         url: "https://youtu.be/_ik09B4ptmo"
-
 
   # ==========================================
   # 03. TheBattleFront
@@ -128,12 +134,10 @@ projects:
   - id: project-03
     name: "TheBattleFront"
     category: team
-    featured: true
     technology: "C++ / Unreal Engine 5.1 / IOCP / Perforce"
     period: "2024.04 ~ 2024.06"
     role: "3인 팀 프로젝트 · 팀장 / Map / AI 시스템"
     image: ""
-
     summary: >-
       Unreal Engine 5.1과 C++를 활용하여 제작한
       쿼터뷰 실시간 멀티플레이 전투 게임입니다.
@@ -143,32 +147,28 @@ projects:
       게임 레벨 및 상호작용 기능을 구현했으며,
       포스트 프로세싱을 이용한 시각 효과와
       미니맵·카메라 연출을 구성했습니다.
-
     highlights:
       - "멀티플레이 상태 동기화 — IOCP 서버 패킷 연동, GameMode 기반 액터 상태 갱신 및 Transform 보간"
       - "AI 행동 시스템 — BehaviorTree/Blackboard, AI Perception, EQS 기반 엄폐 위치 탐색 및 Spline 경로 이동"
       - "게임 레벨 및 상호작용 — Landscape, 적 스폰 시스템, 자기장 축소, 수풀 및 아이템 상호작용"
       - "그래픽스 및 시각 효과 — CustomDepth/Stencil 기반 Sobel Outline, Dissolve Material 및 시야 안개"
       - "카메라·협업 시스템 — SceneCapture2D 미니맵, Cinematic Camera 및 Perforce(P4D) 협업 환경 구축"
-
     github: "https://github.com/ckdlscjs/BattleFront"
     document: ""
     videos:
       - title: "게임 플레이"
         url: "https://youtu.be/uDiQvUdp6hE?si=5JuZOzHQuRLCWNh_"
-    
+
   # ==========================================
   # 04. UnDeadSpace
   # ==========================================
   - id: project-04
     name: "UnDeadSpace"
     category: team
-    featured: false
     technology: "C++ / Unreal Engine 5 / UMG / Niagara"
     period: "2023.05.15 ~ 2023.06.02"
     role: "4인 팀 프로젝트 · 팀장 / UI / Effect / Boss / NPC / GameFlow"
     image: ""
-
     summary: >-
       Unreal Engine 5와 C++을 기반으로 제작한
       3인칭 슈팅(TPS) 액션 게임입니다.
@@ -176,14 +176,12 @@ projects:
       적과 보스를 상대하며 게임을 진행합니다.
       UI 및 이펙트 시스템, 보스 행동 패턴,
       NPC와 시네마틱 연출을 담당했습니다.
-
     highlights:
       - "UI 시스템 — UMG 기반 HP/Stasis 게이지, 탄약 정보, 조준점 및 인벤토리 인터페이스 구현"
       - "동적 머티리얼 — MaterialInstanceDynamic을 활용한 캐릭터 상태 및 게이지 표현"
       - "보스 AI — FSM 기반 보스 행동 설계, Projectile/Laser/Radial Attack 패턴 및 충돌 데미지 처리"
       - "이펙트 시스템 — Niagara 조준점, Stasis/Dissolve Material 및 Cascade 파티클 연출"
       - "NPC 및 게임 흐름 — NPC 캐릭터 구성, 시네마틱 카메라 및 Text UMG 연동"
-
     github: ""
     document: ""
     videos:
@@ -196,12 +194,10 @@ projects:
   - id: project-05
     name: "RandomTowerDefense"
     category: personal
-    featured: false
     technology: "C++ / Unreal Engine 5 / Blueprint / UMG"
     period: "2022.12 ~ 2023.01"
     role: "개인 프로젝트 · 게임 시스템 전체 설계 및 구현"
     image: ""
-
     summary: >-
       Unreal Engine 5와 C++을 활용하여 제작한
       랜덤 타워 디펜스 게임입니다.
@@ -210,14 +206,12 @@ projects:
       적의 웨이브를 방어합니다.
       타워와 적의 상속 구조, 공격 대상 탐색,
       웨이브 시스템 및 UI를 구현했습니다.
-
     highlights:
       - "타워 시스템 — 등급별 클래스 상속, 랜덤 타워 생성, 업그레이드 및 판매 기능"
       - "타겟팅 및 공격 — Range Collider 기반 적 탐색, 우선순위 판별 및 공격 대상 실시간 갱신"
       - "웨이브 시스템 — DataTable 기반 적 종류 및 웨이브 구성, TargetPoint 경로 이동"
       - "게임 진행 — Life 감소, 승리 조건, GameMode 기반 게임 흐름 제어"
       - "UI 및 연출 — UMG 기반 타워 관리·웨이브 정보, Animation Blueprint 및 Cascade Effect 활용"
-
     github: ""
     document: ""
     videos:
@@ -230,12 +224,10 @@ projects:
   - id: project-06
     name: "KirbySurvivors"
     category: personal
-    featured: false
     technology: "C++ / DirectX11 / HLSL / FMOD"
     period: "2022.09 ~ 2022.10"
     role: "개인 프로젝트 · 2D 렌더링 및 게임 시스템 전체 구현"
     image: ""
-
     summary: >-
       DirectX 기반 자체 2D 게임 프레임워크를 활용하여
       제작한 서바이벌 액션 게임입니다.
@@ -243,32 +235,28 @@ projects:
       적의 공격을 회피하며 전투를 진행합니다.
       무한 스크롤 맵, 스프라이트 애니메이션,
       투사체 시스템, 충돌 판정 및 오브젝트 풀링을 구현했습니다.
-
     highlights:
       - "무한 맵 — 9개 타일의 상대 위치 재배치를 활용한 반복형 월드 구성"
       - "2D 렌더링 — UV 좌표 및 프레임 단위 Sprite 애니메이션 시스템"
       - "투사체 시스템 — 삼각함수와 벡터 연산을 이용한 직선·반사·회전형 공격 구현"
       - "오브젝트 관리 — Singleton 기반 ObjectManager 및 Object Pooling을 통한 투사체 재사용"
       - "충돌 및 UI — Box Collision, 충돌 방향 벡터 처리, 셰이더 색상 변조 및 게이지·버튼 UI"
-
     github: ""
     document: ""
     videos:
       - title: "게임 플레이"
         url: "https://youtu.be/sjoyPMjcKE8?si=X-giBfGbA6HpC081"
-    
+
   # ==========================================
   # 07. BlueStone2 UI Renewal
   # ==========================================
   - id: project-07
     name: "BlueStone2 UI Renewal"
     category: team
-    featured: false
     technology: "C++ / 자체 게임 엔진 / Visual Studio 2015"
     period: "2019.04 ~ 2019.06"
     role: "비주얼샤워 클라이언트 개발 인턴 · UI 리뉴얼 및 버그 수정"
     image: ""
-
     summary: >-
       비주얼샤워에서 클라이언트 개발 인턴으로 근무하며
       모바일 게임 블루스톤2의 UI 개선 및
@@ -276,17 +264,15 @@ projects:
       자체 게임 엔진의 API를 활용하여
       VIP 등급 정보 화면과 출석 보상 UI를 개선하고,
       길드 연료 지원 기능의 오류를 수정했습니다.
-
     highlights:
       - "VIP 페이지 리뉴얼 — 회원 등급과 과금 혜택을 표시하는 TableView 기반 UI 구성"
       - "UI 상호작용 — 등급별 정보 노드 배치 및 드래그 기반 화면 탐색 구현"
       - "출석 보상 시스템 — 일일·주간 출석 UI와 애니메이션 리뉴얼, 서버 보상 정보 연동"
       - "길드 지원 시스템 — 길드원 간 연료(피로도) 지급 기능의 버그 수정"
       - "실무 개발 경험 — 상용 게임 클라이언트의 기존 코드 분석 및 자체 엔진 API 활용"
-
     github: ""
     document: ""
-    video: ""
+    videos: []
 
   # ==========================================
   # 08. TheUndertaleOfZelda
@@ -294,12 +280,10 @@ projects:
   - id: project-08
     name: "TheUndertaleOfZelda"
     category: team
-    featured: false
     technology: "C# / Unity / NavMesh / Object Pooling"
     period: "2018.07 ~ 2018.08"
     role: "2인 팀 프로젝트 · 팀장 / Boss / Mob / Map / UI"
     image: ""
-
     summary: >-
       Unity와 C#을 활용하여 제작한
       Top-View 방식의 2D 탄막 슈팅 게임입니다.
@@ -309,33 +293,28 @@ projects:
       탄막 생성·관리 구조를 담당했으며,
       오브젝트 풀링을 활용하여 반복 생성되는
       투사체를 관리했습니다.
-
     highlights:
       - "보스 행동 시스템 — FSM 기반 이동·공격 패턴, 체력 및 상태에 따른 행동 변경"
       - "탄막 시스템 — 직선·부채꼴·원형·회전형 및 Bezier Curve 기반 곡선 투사체 구현"
       - "오브젝트 풀링 — Singleton Spawner와 Prefab Pool을 활용한 투사체 생성 및 재사용"
       - "일반 몬스터 — SpawnPoint 기반 생성, 공격 범위 판별 및 상태별 이동·공격 처리"
       - "맵 및 UI — NavMesh 기반 경로 이동, 충돌체 구성, 폭탄 아이템 및 게임 결과 UI 관리"
-
     github: ""
     document: ""
     videos:
       - title: "게임 플레이"
         url: "https://youtu.be/bOxOlnFNXUY?si=gjtqi8qPZM2tZzlW"
 
-   
   # ==========================================
   # 09. RoomEscape
   # ==========================================
   - id: project-09
     name: "RoomEscape"
     category: team
-    featured: false
     technology: "Java / Android Studio / Android SDK"
     period: "2018.05 ~ 2018.06"
     role: "2인 프로젝트 · Activity 및 UI 구조 설계"
     image: ""
-
     summary: >-
       Android Studio와 Java를 활용하여 제작한
       2D 방 탈출 게임 애플리케이션입니다.
@@ -344,20 +323,17 @@ projects:
       퍼즐을 해결하면서 각 스테이지를 탈출합니다.
       Activity 및 Layout 구조 설계와
       화면 UI 및 이미지 리소스 구성을 담당했습니다.
-
     highlights:
       - "Activity 시스템 — 화면 전환 및 Activity 생명주기 관리"
       - "UI 레이아웃 — ImageView, Button 등을 활용한 화면 구성과 입력 처리"
       - "아이템 시스템 — ListView 기반 보유 아이템 확인 및 사용 인터페이스"
       - "상호작용 — 이미지 클릭 및 상태 변화에 따른 퍼즐 진행, Toast 메시지 출력"
       - "화면 연출 — Custom Dialog 기반 확대 화면, 이미지 상태 변화 및 사운드 적용"
-
     github: ""
     document: ""
     videos:
       - title: "게임 플레이"
         url: "https://youtu.be/dJRdAu5pH4c?si=nL_G82aaWeCLfR0p"
-
 
   # ==========================================
   # 10. MAC - 미세먼지 측정 시스템
@@ -365,12 +341,10 @@ projects:
   - id: project-10
     name: "MAC - 미세먼지 측정 및 공기청정 시스템"
     category: team
-    featured: false
     technology: "Arduino / Java / Android / Bluetooth / SQLite"
     period: "2017.09 ~ 2017.11"
     role: "2인 팀 프로젝트 · 하드웨어 구성 및 Android 앱 개발"
     image: ""
-
     summary: >-
       Arduino 기반 미세먼지 측정 장치와
       Android 애플리케이션을 연동하여 제작한
@@ -379,17 +353,15 @@ projects:
       SQLite에 데이터를 저장하여 시간별 통계 그래프로
       시각화했습니다. 측정값에 따른 공기청정 팬의
       자동·수동 제어 기능을 구현했습니다.
-
     highlights:
       - "임베디드 시스템 — Arduino Uno, 먼지 센서, Bluetooth 모듈 및 팬 제어 회로 구성"
       - "무선 통신 — Bluetooth 기반 센서 데이터 송수신 및 기기 제어"
       - "데이터 관리 — SQLite 기반 측정값 저장·조회 및 데이터 처리"
       - "통계 시각화 — MPAndroidChart를 활용한 일별·시간별 측정 그래프"
       - "제어 시스템 — 미세먼지 수치에 따른 팬 자동 On/Off 및 수동 제어, LCD 실시간 출력"
-
     github: ""
     document: ""
-    video: ""
+    videos: []
 
   # ==========================================
   # 11. WaterBank
@@ -397,12 +369,10 @@ projects:
   - id: project-11
     name: "WaterBank"
     category: team
-    featured: false
     technology: "Java / Android Studio / SQLite / MPAndroidChart"
     period: "2017.11 ~ 2017.12"
     role: "2인 팀 프로젝트 · DB 및 수분 섭취 기록·통계 기능"
     image: ""
-
     summary: >-
       Android Studio와 Java를 기반으로 제작한
       수분 섭취량 관리 애플리케이션입니다.
@@ -412,17 +382,15 @@ projects:
       통계 그래프를 제공합니다.
       기상청 API를 이용한 날씨·습도 정보 표시 기능도
       구성했습니다.
-
     highlights:
       - "데이터베이스 — SQLite 기반 섭취 기록 저장 및 조회 구조 설계"
       - "일일 기록 — ListView를 활용한 날짜별 수분 섭취 내역 표시"
       - "목표 관리 — 사용자 목표 섭취량 대비 현재 섭취량의 시각적 표현"
       - "통계 기능 — MPAndroidChart 기반 날짜별 섭취량 및 평균값 그래프"
       - "외부 데이터 연동 — 기상청 API를 활용한 날씨 및 습도 정보 표시"
-
     github: ""
     document: ""
-    video: ""
+    videos: []
 
 # ==========================================
 # 경력
@@ -431,73 +399,49 @@ career:
   - title: "㈜비주얼샤워 | 게임 클라이언트 개발 인턴"
     period: "2019.04 ~ 2019.06"
     description: >-
-      모바일 게임 '블루스톤2'의 클라이언트 개발 업무에 참여.
-      자체 게임 엔진의 API를 활용하여 VIP 등급 정보 페이지와
-      일일·주간 출석 보상 UI를 리뉴얼했습니다.
-      서버에서 전달되는 보상 정보와 UI의 연동 기능을 구현하고,
-      길드원 간 연료(피로도) 지원 시스템의 버그를 수정했습니다.
-      기존 상용 게임의 코드 분석, UI 시스템 유지보수 및
-      기능 개선 업무를 경험했습니다.
-
+      모바일 게임 블루스톤2의 클라이언트 개발 업무에 참여했습니다.
+      자체 게임 엔진 API를 활용해 VIP 등급 및 출석 보상 UI를
+      리뉴얼하고, 서버 보상 정보 연동과
+      길드 연료 지원 시스템의 오류를 수정했습니다.
 
 # ==========================================
 # 학력 및 교육
 # ==========================================
 education:
-  # 01. 게임 개발 전문 교육
   - title: "KGCA 게임아카데미 | 게임 프로그래밍 전문가 과정"
     period: "2022.07 ~ 2023.06"
     description: >-
-      C++ 기반 게임 프로그래밍과 DirectX11 렌더링,
-      Unreal Engine 5를 활용한 게임 개발 과정을 이수했습니다.
-      DirectX11 기반 2D·3D 게임 개발과 MapTool 제작,
-      Unreal Engine 기반 개인 및 팀 프로젝트를 진행했습니다.
-      주요 프로젝트로 KirbySurvivors, RandomTowerDefense,
-      LoLShinSouls, UnDeadSpace를 개발했으며,
-      팀 프로젝트에서는 팀장으로 참여했습니다.
+      C++, DirectX11 및 Unreal Engine 5 기반 게임 개발 교육을
+      이수했습니다. KirbySurvivors, RandomTowerDefense,
+      LoLShinSouls, UnDeadSpace 등의 프로젝트를 진행했습니다.
 
-  # 02. AR/VR 소프트웨어 교육
   - title: "KITRI 한국정보기술연구원 | AR/VR SW 응용 구직자 과정"
     period: "2018.03 ~ 2018.08"
     description: >-
-      AR/VR 콘텐츠 및 응용 소프트웨어 개발 교육을 이수했습니다.
-      Java와 Android Studio를 활용한 모바일 애플리케이션
-      개발 및 Unity 기반 게임 개발을 경험했습니다.
-      Android 방 탈출 게임 RoomEscape와
-      Unity 기반 2D 탄막 슈팅 게임 TheUndertaleOfZelda를
-      제작했습니다.
+      Android 및 Unity 기반 응용 소프트웨어 개발 교육을
+      이수하고 RoomEscape와 TheUndertaleOfZelda를 제작했습니다.
 
-  # 03. 대학교
   - title: "대진대학교 | 컴퓨터공학과"
     period: "2011.03 ~ 2018.02"
     description: >-
-      컴퓨터공학과 학사 졸업 (학점 3.87 / 4.5).
-      C/C++, Java, 자료구조, 데이터베이스 및
-      소프트웨어 개발 관련 학습을 진행했습니다.
-      졸업 작품으로 Arduino 기반 미세먼지 측정 장치와
-      Android 애플리케이션을 연동한 MAC 프로젝트를 수행했으며,
-      별도로 수분 섭취량 관리 앱 WaterBank를 개발했습니다.
+      컴퓨터공학과 학사 졸업 (3.87 / 4.5).
+      Arduino와 Android 앱을 연동한 MAC 졸업 프로젝트 및
+      WaterBank 애플리케이션 개발 경험이 있습니다.
 
-  # 04. 고등학교
   - title: "동국대학교사범대학부속고등학교"
     period: "2008.03 ~ 2011.02"
     description: "졸업"
-
 
 # ==========================================
 # 자격증 및 활동
 # ==========================================
 awards:
-  # 01. 정보처리기사
   - title: "정보처리기사"
     period: "2016.11"
-    description: >-
-      한국산업인력공단 시행 국가기술자격 취득.
+    description: "한국산업인력공단 시행 국가기술자격 취득"
     url: ""
 
-  # 02. 일본어능력시험
   - title: "JLPT N3"
     period: "2018.08"
-    description: >-
-      일본어능력시험(JLPT) N3 취득.
+    description: "일본어능력시험 N3 취득"
     url: ""
