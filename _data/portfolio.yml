@@ -59,6 +59,7 @@ projects:
 
     github: ""
     document: ""
+
     links:
       - title: "알고리즘 문제풀이"
         url: "https://blog.naver.com/syl610/224364009779"
@@ -66,6 +67,7 @@ projects:
         url: "https://blog.naver.com/syl610/224314221774"
       - title: "AlgorithmRepo"
         url: "https://github.com/ckdlscjs/AlgorithmRepo"
+
     videos: []
 
 
@@ -81,8 +83,6 @@ projects:
     image: "/assets/images/p02.png"
 
     summary: >-
-      
-    summary: >-
       DirectX11과 C++17을 기반으로 게임 엔진의 핵심 시스템과
       3D 렌더링 파이프라인을 직접 구현한 개인 프로젝트입니다.
       기존 OOP 기반 렌더러에서 경험한 메모리 파편화와
@@ -92,7 +92,6 @@ projects:
       리소스 관리부터 충돌·피킹, 렌더패스 및
       인스턴싱 배치 처리까지 단계적으로 구조를 개선했습니다.
 
-
     # highlights:
     #   - "엔진 아키텍처 및 리소스 시스템 — CRTP 기반 시스템 관리, RAII 및 D3D11 Wrapper, FNV-1a 해시 기반 리소스 캐싱"
     #   - "DOD 기반 ECS — Archetype/Bitset, 16KB Chunk, Sparse/Dense Lookup 및 Swap & Pop 기반 엔티티 관리"
@@ -101,7 +100,7 @@ projects:
     #   - "가시성 및 충돌 처리 — Frustum Culling, 경계 볼륨 판정, Compute Shader 기반 스키닝 및 Triangle Picking"
 
     github: "https://github.com/ckdlscjs/c_cpp"
-    document: ""
+    document: "/assets/pdfs/DX11_ECS_Renderer.pdf"
     videos: []
 
 
@@ -133,7 +132,7 @@ projects:
     #   - "게임 클라이언트 시스템 — SpringArm 카메라 충돌 회피, Bezier/Perlin Noise 연출, 계층형 UI 및 RTT 미니맵"
 
     github: "https://github.com/ckdlscjs/TeamProject"
-    document: ""
+    document: "/assets/pdfs/LoLShinSouls_MapTool.pdf"
 
     videos:
       - title: "게임 플레이"
@@ -172,7 +171,7 @@ projects:
     #   - "카메라·협업 시스템 — SceneCapture2D 미니맵, Cinematic Camera 및 Perforce(P4D) 협업 환경 구축"
 
     github: "https://github.com/ckdlscjs/BattleFront"
-    document: ""
+    document: "/assets/pdfs/TheBattleFront.pdf"
 
     videos:
       - title: "게임 플레이"
@@ -208,8 +207,7 @@ projects:
     github: ""
     document: ""
 
-    # 현재 GitHub에 등록된 주소 보존.
-    # LoLShinSouls와 동일한 영상 ID이므로 추후 확인 필요.
+    # 현재 등록된 영상 주소 유지
     videos:
       - title: "게임 플레이"
         url: "https://youtu.be/P7W4FhfePHU?si=e5aT_h1pUuKj84YX"
@@ -349,7 +347,6 @@ projects:
     videos:
       - title: "게임 플레이"
         url: "https://youtu.be/bOxOlnFNXUY?si=gjtqi8qPZM2tZzlW"
-
       - title: "보스 패턴"
         url: "https://youtu.be/Ym5E6Hje-2s"
 
