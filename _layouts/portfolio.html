@@ -298,7 +298,7 @@
             </p>
 
 
-            <!-- 하이라이트: YAML에서 주석 처리된 경우 미출력 -->
+            <!-- 하이라이트 -->
 
             {% if project.highlights.size > 0 %}
             <ul class="project-highlights">
@@ -312,13 +312,13 @@
 
 
             <!-- ====================================
-                 프로젝트 링크 설정
+                 프로젝트 링크
 
-                 links    : 사용자 지정 링크
-                 github   : 상세 코드 분석
-                 document : 프로젝트 상세 설명 PDF
-                 videos   : 여러 시연 영상
-                 video    : 기존 단일 영상
+                 표시 순서:
+                 1. 사용자 지정 링크
+                 2. 프로젝트 상세 설명 (PDF)
+                 3. 상세 코드 분석 (GitHub)
+                 4. 시연 영상
 
                  비어 있는 링크는 출력하지 않음
             ==================================== -->
@@ -374,15 +374,17 @@
             {% endif %}
 
 
-            <!-- 실제 링크가 있는 프로젝트만 링크 영역 생성 -->
+            <!-- 실제 링크가 있는 프로젝트만 출력 -->
 
             {% if has_project_links %}
 
             <div class="project-links">
 
 
-              <!-- 1. 사용자 지정 링크 -->
-              <!-- 첫 번째 학습 기록: 알고리즘/렌더러/백준 GitHub -->
+              <!-- ==================================
+                   1. 사용자 지정 링크
+                   학습 기록 카드의 링크 3개 유지
+              ================================== -->
 
               {% for link in project.links %}
 
@@ -406,42 +408,18 @@
               {% endfor %}
 
 
-              <!-- 2. 상세 코드 분석 (GitHub) -->
-
-              {% if github_url != '' %}
-
-              <a href="{{ github_url | escape }}"
-                 target="_blank"
-                 rel="noopener noreferrer">
-
-                <i class="fab fa-github" aria-hidden="true"></i>
-
-                상세 코드 분석
-
-              </a>
-
-              {% endif %}
-
-
-              <!-- 3. 프로젝트 상세 설명 (PDF) -->
+              <!-- ==================================
+                   2. 프로젝트 상세 설명 (PDF)
+                   가장 왼쪽에 배치
+              ================================== -->
 
               {% if document_url != '' %}
 
-                {% assign document_first_char = document_url | slice: 0, 1 %}
-
-                {% if document_url contains '://' %}
-
-                  {% assign document_href = document_url %}
-
-                {% elsif document_first_char == '/' %}
-
-                  {% assign document_href = document_url | relative_url %}
-
-                {% else %}
-
-                  {% assign document_href = document_url | relative_url %}
-
-                {% endif %}
+              {% if document_url contains '://' %}
+                {% assign document_href = document_url %}
+              {% else %}
+                {% assign document_href = document_url | relative_url %}
+              {% endif %}
 
               <a href="{{ document_href | escape }}"
                  target="_blank"
@@ -457,7 +435,29 @@
               {% endif %}
 
 
-              <!-- 4. 여러 개의 시연 영상 -->
+              <!-- ==================================
+                   3. 상세 코드 분석 (GitHub)
+              ================================== -->
+
+              {% if github_url != '' %}
+
+              <a href="{{ github_url | escape }}"
+                 target="_blank"
+                 rel="noopener noreferrer">
+
+                <i class="fab fa-github"
+                   aria-hidden="true"></i>
+
+                상세 코드 분석
+
+              </a>
+
+              {% endif %}
+
+
+              <!-- ==================================
+                   4. 여러 개의 시연 영상
+              ================================== -->
 
               {% if valid_videos > 0 %}
 
@@ -483,7 +483,7 @@
                 {% endfor %}
 
 
-              <!-- 5. 기존 단일 시연 영상 호환 -->
+              <!-- 기존 단일 영상 필드 호환 -->
 
               {% elsif single_video_url != '' %}
 
