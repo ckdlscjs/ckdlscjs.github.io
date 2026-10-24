@@ -41,9 +41,9 @@ profile:
 
         물론 모든 일을 전문적으로 잘할 수 있는 것은 아닙니다. 다만 처음 접하는 분야라고 해서 포기하기보다는 필요한 정보를 찾아보고 직접 해보면서 제 나름의 방법을 익힙니다. 책이나 자료로 얻는 지식도 중요하지만, 실제로 부딪혀 보지 않으면 알 수 없는 부분이 많다고 생각합니다.
       images:
-        - src: "/assets/images/keyboard.jpg"  # 실제 파일명 확인
+        - src: "/assets/images/keyboard.png"  # 실제 파일명 확인
           caption: "커스텀 키보드 제작 및 개조"
-        - src: "/assets/images/watch.jpg"  # 실제 파일명 확인
+        - src: "/assets/images/watch.png"  # 실제 파일명 확인
           caption: "기계식 시계 분해 및 정비"
 
     - title: "Craftsmanship"
@@ -54,7 +54,7 @@ profile:
 
         다른 사람이 제가 만든 결과물에 기꺼이 비용을 지불한다는 것은 단순한 금전적인 보상 이상의 의미가 있습니다. 제 눈에 부족한 부분이 보이면 계속 신경이 쓰이고 이미 완성한 작업도 다시 손보는 경우가 많지만, 적어도 제가 잘 알고 있는 분야에서는 스스로 만족할 수 있는 기준을 지키고 싶습니다.
       images:
-        - src: "/assets/images/strap.jpg"  # 실제 파일명 확인
+        - src: "/assets/images/strap.png"  # 실제 파일명 확인
           caption: "직접 만든 가죽 시곗줄"
 
     - title: "Relationships & Communication"
