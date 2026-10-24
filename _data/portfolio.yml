@@ -76,7 +76,7 @@ projects:
     name: "DirectX11 기반 ECS 아키텍처 렌더러"
     category: personal
     technology: "C++17 / DirectX11 / HLSL / ECS / ImGui"
-    period: "2025.05 ~ 진행 중"
+    period: "2025.05 ~ 2026.06"
     role: "개인 프로젝트 · 엔진 아키텍처 및 렌더링 시스템 전체 설계·구현"
     image: "/assets/images/p02.png"
 
