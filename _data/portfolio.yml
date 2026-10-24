@@ -43,7 +43,7 @@ profile:
       images:
         - src: "/assets/images/keyboard.png"  # 실제 파일명 확인
           caption: "커스텀 키보드 제작 및 개조"
-        - src: "/assets/images/watch.png"  # 실제 파일명 확인
+        - src: "/assets/images/watch.jpg"  # 실제 파일명 확인
           caption: "기계식 시계 분해 및 정비"
 
     - title: "Craftsmanship"
