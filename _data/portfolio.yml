@@ -4,8 +4,8 @@
 # ==========================================
 profile:
   name: "이선용"
-  role: "게임 클라이언트 프로그래머"
-  introduction: ""
+  role: "Developer"
+  introduction: "배운 것을 직접 구현하고, 경험을 쌓아 더 나은 결과물을 만들어 가는 개발자입니다."
 
   skills:
     - "C++"
