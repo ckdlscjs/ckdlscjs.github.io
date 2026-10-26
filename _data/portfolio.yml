@@ -310,6 +310,107 @@ projects:
 
 
   # ==========================================
+  # 07. BlueStone2 UI Renewal
+  # ==========================================
+  - id: project-07
+    name: "BlueStone2 UI Renewal"
+    category: team
+    technology: "C++ / 자체 게임 엔진 / Visual Studio 2015"
+    period: "2019.04 ~ 2019.06"
+    role: "비주얼샤워 클라이언트 개발 인턴 · UI 리뉴얼 및 버그 수정"
+    image: "/assets/images/p08.png"
+
+    summary: >-
+      비주얼샤워에서 클라이언트 개발 인턴으로 근무하며
+      모바일 게임 블루스톤2의 UI 개선 및
+      기존 기능의 오류 수정 작업을 수행했습니다.
+      자체 게임 엔진의 API를 활용하여
+      VIP 등급 정보 화면과 출석 보상 UI를 개선하고,
+      길드 연료 지원 기능의 오류를 수정했습니다.
+
+    # highlights:
+    #   - "VIP 페이지 리뉴얼 — 회원 등급과 과금 혜택을 표시하는 TableView 기반 UI 구성"
+    #   - "UI 상호작용 — 등급별 정보 노드 배치 및 드래그 기반 화면 탐색 구현"
+    #   - "출석 보상 시스템 — 일일·주간 출석 UI와 애니메이션 리뉴얼, 서버 보상 정보 연동"
+    #   - "길드 지원 시스템 — 길드원 간 연료(피로도) 지급 기능의 버그 수정"
+    #   - "실무 개발 경험 — 상용 게임 클라이언트의 기존 코드 분석 및 자체 엔진 API 활용"
+
+    github: ""
+    document: ""
+    videos: []
+
+
+  # ==========================================
+  # 10. MAC - 미세먼지 측정 시스템
+  # ==========================================
+  - id: project-10
+    name: "MAC - 미세먼지 측정 및 공기청정 시스템"
+    category: team
+    technology: "Arduino / Java / Android / Bluetooth / SQLite"
+    period: "2017.09 ~ 2017.11"
+    role: "2인 팀 프로젝트 · 하드웨어 구성 및 Android 앱 개발"
+    image: "/assets/images/p11.png"
+
+    summary: >-
+      Arduino 기반 미세먼지 측정 장치와
+      Android 애플리케이션을 연동하여 제작한
+      실시간 환경 측정 및 공기청정 제어 시스템입니다.
+      Bluetooth를 통해 센서 측정값을 수신하고,
+      SQLite에 데이터를 저장하여 시간별 통계 그래프로
+      시각화했습니다. 측정값에 따른 공기청정 팬의
+      자동·수동 제어 기능을 구현했습니다.
+
+    # highlights:
+    #   - "임베디드 시스템 — Arduino Uno, 먼지 센서, Bluetooth 모듈 및 팬 제어 회로 구성"
+    #   - "무선 통신 — Bluetooth 기반 센서 데이터 송수신 및 기기 제어"
+    #   - "데이터 관리 — SQLite 기반 측정값 저장·조회 및 데이터 처리"
+    #   - "통계 시각화 — MPAndroidChart를 활용한 일별·시간별 측정 그래프"
+    #   - "제어 시스템 — 미세먼지 수치에 따른 팬 자동 On/Off 및 수동 제어, LCD 실시간 출력"
+
+    github: ""
+    document: ""
+    videos: []
+
+
+  # ==========================================
+  # 08. TheUndertaleOfZelda
+  # ==========================================
+  - id: project-08
+    name: "TheUndertaleOfZelda"
+    category: team
+    technology: "C# / Unity / NavMesh / Object Pooling"
+    period: "2018.07 ~ 2018.08"
+    role: "2인 팀 프로젝트 · 팀장 / Boss / Mob / Map / UI"
+    image: "/assets/images/p09.png"
+
+    summary: >-
+      Unity와 C#을 활용하여 제작한
+      Top-View 방식의 2D 탄막 슈팅 게임입니다.
+      플레이어는 아이템과 무기를 활용하여
+      다양한 탄막 패턴을 사용하는 보스를 상대합니다.
+      보스 및 일반 적의 행동 시스템과
+      탄막 생성·관리 구조를 담당했으며,
+      오브젝트 풀링을 활용하여 반복 생성되는
+      투사체를 관리했습니다.
+
+    # highlights:
+    #   - "보스 행동 시스템 — FSM 기반 이동·공격 패턴, 체력 및 상태에 따른 행동 변경"
+    #   - "탄막 시스템 — 직선·부채꼴·원형·회전형 및 Bezier Curve 기반 곡선 투사체 구현"
+    #   - "오브젝트 풀링 — Singleton Spawner와 Prefab Pool을 활용한 투사체 생성 및 재사용"
+    #   - "일반 몬스터 — SpawnPoint 기반 생성, 공격 범위 판별 및 상태별 이동·공격 처리"
+    #   - "맵 및 UI — NavMesh 기반 경로 이동, 충돌체 구성, 폭탄 아이템 및 게임 결과 UI 관리"
+
+    github: ""
+    document: ""
+
+    videos:
+      - title: "게임 플레이"
+        url: "https://youtu.be/bOxOlnFNXUY?si=gjtqi8qPZM2tZzlW"
+      - title: "보스 패턴"
+        url: "https://youtu.be/Ym5E6Hje-2s"
+
+
+  # ==========================================
   # 05. RandomTowerDefense
   # ==========================================
   - id: project-05
@@ -379,75 +480,6 @@ projects:
 
 
   # ==========================================
-  # 07. BlueStone2 UI Renewal
-  # ==========================================
-  - id: project-07
-    name: "BlueStone2 UI Renewal"
-    category: team
-    technology: "C++ / 자체 게임 엔진 / Visual Studio 2015"
-    period: "2019.04 ~ 2019.06"
-    role: "비주얼샤워 클라이언트 개발 인턴 · UI 리뉴얼 및 버그 수정"
-    image: "/assets/images/p08.png"
-
-    summary: >-
-      비주얼샤워에서 클라이언트 개발 인턴으로 근무하며
-      모바일 게임 블루스톤2의 UI 개선 및
-      기존 기능의 오류 수정 작업을 수행했습니다.
-      자체 게임 엔진의 API를 활용하여
-      VIP 등급 정보 화면과 출석 보상 UI를 개선하고,
-      길드 연료 지원 기능의 오류를 수정했습니다.
-
-    # highlights:
-    #   - "VIP 페이지 리뉴얼 — 회원 등급과 과금 혜택을 표시하는 TableView 기반 UI 구성"
-    #   - "UI 상호작용 — 등급별 정보 노드 배치 및 드래그 기반 화면 탐색 구현"
-    #   - "출석 보상 시스템 — 일일·주간 출석 UI와 애니메이션 리뉴얼, 서버 보상 정보 연동"
-    #   - "길드 지원 시스템 — 길드원 간 연료(피로도) 지급 기능의 버그 수정"
-    #   - "실무 개발 경험 — 상용 게임 클라이언트의 기존 코드 분석 및 자체 엔진 API 활용"
-
-    github: ""
-    document: ""
-    videos: []
-
-
-  # ==========================================
-  # 08. TheUndertaleOfZelda
-  # ==========================================
-  - id: project-08
-    name: "TheUndertaleOfZelda"
-    category: team
-    technology: "C# / Unity / NavMesh / Object Pooling"
-    period: "2018.07 ~ 2018.08"
-    role: "2인 팀 프로젝트 · 팀장 / Boss / Mob / Map / UI"
-    image: "/assets/images/p09.png"
-
-    summary: >-
-      Unity와 C#을 활용하여 제작한
-      Top-View 방식의 2D 탄막 슈팅 게임입니다.
-      플레이어는 아이템과 무기를 활용하여
-      다양한 탄막 패턴을 사용하는 보스를 상대합니다.
-      보스 및 일반 적의 행동 시스템과
-      탄막 생성·관리 구조를 담당했으며,
-      오브젝트 풀링을 활용하여 반복 생성되는
-      투사체를 관리했습니다.
-
-    # highlights:
-    #   - "보스 행동 시스템 — FSM 기반 이동·공격 패턴, 체력 및 상태에 따른 행동 변경"
-    #   - "탄막 시스템 — 직선·부채꼴·원형·회전형 및 Bezier Curve 기반 곡선 투사체 구현"
-    #   - "오브젝트 풀링 — Singleton Spawner와 Prefab Pool을 활용한 투사체 생성 및 재사용"
-    #   - "일반 몬스터 — SpawnPoint 기반 생성, 공격 범위 판별 및 상태별 이동·공격 처리"
-    #   - "맵 및 UI — NavMesh 기반 경로 이동, 충돌체 구성, 폭탄 아이템 및 게임 결과 UI 관리"
-
-    github: ""
-    document: ""
-
-    videos:
-      - title: "게임 플레이"
-        url: "https://youtu.be/bOxOlnFNXUY?si=gjtqi8qPZM2tZzlW"
-      - title: "보스 패턴"
-        url: "https://youtu.be/Ym5E6Hje-2s"
-
-
-  # ==========================================
   # 09. RoomEscape
   # ==========================================
   - id: project-09
@@ -480,38 +512,6 @@ projects:
     videos:
       - title: "게임 플레이"
         url: "https://youtu.be/dJRdAu5pH4c?si=nL_G82aaWeCLfR0p"
-
-
-  # ==========================================
-  # 10. MAC - 미세먼지 측정 시스템
-  # ==========================================
-  - id: project-10
-    name: "MAC - 미세먼지 측정 및 공기청정 시스템"
-    category: team
-    technology: "Arduino / Java / Android / Bluetooth / SQLite"
-    period: "2017.09 ~ 2017.11"
-    role: "2인 팀 프로젝트 · 하드웨어 구성 및 Android 앱 개발"
-    image: "/assets/images/p11.png"
-
-    summary: >-
-      Arduino 기반 미세먼지 측정 장치와
-      Android 애플리케이션을 연동하여 제작한
-      실시간 환경 측정 및 공기청정 제어 시스템입니다.
-      Bluetooth를 통해 센서 측정값을 수신하고,
-      SQLite에 데이터를 저장하여 시간별 통계 그래프로
-      시각화했습니다. 측정값에 따른 공기청정 팬의
-      자동·수동 제어 기능을 구현했습니다.
-
-    # highlights:
-    #   - "임베디드 시스템 — Arduino Uno, 먼지 센서, Bluetooth 모듈 및 팬 제어 회로 구성"
-    #   - "무선 통신 — Bluetooth 기반 센서 데이터 송수신 및 기기 제어"
-    #   - "데이터 관리 — SQLite 기반 측정값 저장·조회 및 데이터 처리"
-    #   - "통계 시각화 — MPAndroidChart를 활용한 일별·시간별 측정 그래프"
-    #   - "제어 시스템 — 미세먼지 수치에 따른 팬 자동 On/Off 및 수동 제어, LCD 실시간 출력"
-
-    github: ""
-    document: ""
-    videos: []
 
 
   # ==========================================
