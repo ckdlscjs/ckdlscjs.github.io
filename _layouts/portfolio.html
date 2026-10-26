@@ -17,6 +17,17 @@
   <link rel="stylesheet"
         href="{{ '/assets/portfolio.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 
+  <!-- ABOUT ME 팝업: 본문만 보조 글자색으로 표시하고 강조문은 유지 -->
+  <style>
+    #about-dialog .prose p {
+      color: var(--muted);
+    }
+    #about-dialog .prose p strong,
+    #about-dialog .prose p b {
+      color: var(--text);
+    }
+  </style>
+
   <!-- ABOUT ME 취미 사진 갤러리 전용 스타일 -->
   <style>
     .portfolio-page .about-photo-grid {
@@ -25,19 +36,32 @@
       gap: 14px;
       margin: 18px 0 30px;
     }
-    .portfolio-page .about-photo-card { margin: 0; min-width: 0; }
-    .portfolio-page .about-photo-card a { display: block; }
+    .portfolio-page .about-photo-card {
+      margin: 0;
+      min-width: 0;
+    }
+    .portfolio-page .about-photo-card a {
+      display: block;
+    }
     .portfolio-page .about-photo-card img {
-      display: block; width: 100%; aspect-ratio: 4 / 3;
-      object-fit: cover; border-radius: 10px;
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 10px;
       border: 1px solid rgba(127,127,127,.22);
     }
     .portfolio-page .about-photo-card figcaption {
-      font-size: .85rem; line-height: 1.5;
-      color: inherit; opacity: .75; margin-top: 7px;
+      font-size: .85rem;
+      line-height: 1.5;
+      color: inherit;
+      opacity: .75;
+      margin-top: 7px;
     }
     @media (max-width: 560px) {
-      .portfolio-page .about-photo-grid { grid-template-columns: 1fr; }
+      .portfolio-page .about-photo-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -49,6 +73,7 @@
 <a class="skip-link" href="#about">
   본문으로 건너뛰기
 </a>
+
 
 <!-- ========================================
      NAVIGATION
@@ -805,7 +830,8 @@
         {% if image_src != '' %}
         <figure class="about-photo-card">
           <a href="{{ image_src | relative_url }}"
-             target="_blank" rel="noopener noreferrer"
+             target="_blank"
+             rel="noopener noreferrer"
              aria-label="{{ photo.caption | default: item.title | escape }} 사진 크게 보기">
             <img src="{{ image_src | relative_url }}"
                  alt="{{ photo.caption | default: item.title | escape }}"
