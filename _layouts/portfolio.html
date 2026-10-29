@@ -17,6 +17,96 @@
   <link rel="stylesheet"
         href="{{ '/assets/portfolio.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 
+  <style>
+/* PDF 출력 전용. 기존 portfolio.css의 맨 아래에 추가하는 스타일입니다. */
+.print-about { display: none; }
+@page { size: A4; margin: 13mm; }
+@media print {
+  html, body { background: #fff !important; }
+  .portfolio-page, .portfolio-page[data-theme="dark"] {
+    --bg: #fff; --band: #fff; --surface: #fff;
+    --text: #222; --muted: #555; --line: #ddd;
+    --accent: #156b57; --tag: #f2f5f4;
+    background: #fff !important; color: #222 !important;
+    color-scheme: light !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    font-size: 10pt;
+  }
+  .portfolio-page .site-nav,
+  .portfolio-page .filters,
+  .portfolio-page .intro-actions,
+  .portfolio-page .detail-dialog,
+  .portfolio-page .skip-link,
+  .portfolio-page .site-footer { display: none !important; }
+  .portfolio-page .page-width { width: 100% !important; max-width: none !important; }
+  .portfolio-page .introduction { padding: 0 0 7mm !important; }
+  .portfolio-page .intro-layout {
+    min-height: 0 !important; display: flex !important;
+    flex-direction: row !important; align-items: center !important;
+    gap: 8mm !important;
+  }
+  .portfolio-page .intro-content { flex: 1 1 auto; }
+  .portfolio-page .introduction h1 { font-size: 25pt !important; }
+  .portfolio-page .profile-image {
+    width: 34mm !important; max-width: 34mm !important;
+    height: auto !important; aspect-ratio: auto !important;
+    max-height: 48mm !important; object-fit: contain !important;
+    margin: 0 !important;
+  }
+  .portfolio-page .skill-tags { margin-top: 5mm !important; }
+  .portfolio-page .print-profile-links {
+    display: flex !important; flex-wrap: wrap;
+    gap: 3mm 5mm; font-size: 9pt; margin-top: 4mm;
+  }
+  .portfolio-page .print-about {
+    display: block !important; border-top: 1px solid #ddd;
+    padding: 7mm 0 8mm !important;
+  }
+  .portfolio-page .print-about > h2 { font-size: 18pt !important; margin-bottom: 6mm !important; }
+  .portfolio-page .print-about-item { margin-bottom: 7mm !important; }
+  .portfolio-page .print-about-item h3 { font-size: 13pt !important; margin-bottom: 3mm !important; }
+  .portfolio-page .print-about-item .prose { color: #555; line-height: 1.6; }
+  .portfolio-page .print-about-item .prose p { margin: 0 0 3mm !important; orphans: 3; widows: 3; }
+  .portfolio-page .print-about-item .prose strong { color: #222 !important; }
+  .portfolio-page .print-about .about-photo-grid {
+    display: grid !important; grid-template-columns: repeat(2, minmax(0,1fr)) !important;
+    gap: 4mm !important; margin: 4mm 0 6mm !important;
+  }
+  .portfolio-page .print-about .about-photo-card { break-inside: avoid; margin: 0; }
+  .portfolio-page .print-about .about-photo-card img {
+    max-height: 55mm !important; width: 100% !important;
+    aspect-ratio: auto !important; object-fit: contain !important;
+  }
+  .portfolio-page .background-section,
+  .portfolio-page .projects-section,
+  .portfolio-page .contact-section { padding: 7mm 0 !important; }
+  .portfolio-page .background-unified { gap: 5mm !important; }
+  .portfolio-page .background-group { break-inside: auto; }
+  .portfolio-page .resume-row { break-inside: avoid; }
+  .portfolio-page .project-grid {
+    grid-template-columns: repeat(2, minmax(0,1fr)) !important;
+    gap: 5mm !important;
+  }
+  .portfolio-page .project-card {
+    break-inside: avoid; page-break-inside: avoid;
+    box-shadow: none !important;
+  }
+  .portfolio-page .project-card[hidden] { display: flex !important; }
+  .portfolio-page .project-media { aspect-ratio: 16 / 9 !important; }
+  .portfolio-page .project-media img { max-height: 55mm; object-fit: cover; }
+  .portfolio-page .project-body { padding: 4mm !important; }
+  .portfolio-page .project-links {
+    display: flex !important; flex-wrap: wrap !important; gap: 2mm 4mm !important;
+  }
+  .portfolio-page .project-links a { display: inline-flex !important; font-size: 8.5pt !important; }
+  .portfolio-page a[href] { color: #156b57 !important; text-decoration: underline !important; }
+  .portfolio-page h2, .portfolio-page h3, .portfolio-page h4 { break-after: avoid; }
+  .portfolio-page img, .portfolio-page figure { max-width: 100%; }
+}
+
+  </style>
+
   <!-- ABOUT ME 팝업: 본문만 보조 글자색으로 표시하고 강조문은 유지 -->
   <style>
     #about-dialog .prose p {
@@ -36,32 +126,19 @@
       gap: 14px;
       margin: 18px 0 30px;
     }
-    .portfolio-page .about-photo-card {
-      margin: 0;
-      min-width: 0;
-    }
-    .portfolio-page .about-photo-card a {
-      display: block;
-    }
+    .portfolio-page .about-photo-card { margin: 0; min-width: 0; }
+    .portfolio-page .about-photo-card a { display: block; }
     .portfolio-page .about-photo-card img {
-      display: block;
-      width: 100%;
-      aspect-ratio: 4 / 3;
-      object-fit: cover;
-      border-radius: 10px;
+      display: block; width: 100%; aspect-ratio: 4 / 3;
+      object-fit: cover; border-radius: 10px;
       border: 1px solid rgba(127,127,127,.22);
     }
     .portfolio-page .about-photo-card figcaption {
-      font-size: .85rem;
-      line-height: 1.5;
-      color: inherit;
-      opacity: .75;
-      margin-top: 7px;
+      font-size: .85rem; line-height: 1.5;
+      color: inherit; opacity: .75; margin-top: 7px;
     }
     @media (max-width: 560px) {
-      .portfolio-page .about-photo-grid {
-        grid-template-columns: 1fr;
-      }
+      .portfolio-page .about-photo-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -73,7 +150,6 @@
 <a class="skip-link" href="#about">
   본문으로 건너뛰기
 </a>
-
 
 <!-- ========================================
      NAVIGATION
@@ -190,6 +266,15 @@
         </div>
 
 
+        <!-- 인쇄 전용 프로필 링크 -->
+        <div class="print-profile-links" style="display: none">
+          {% if profile_github != '' %}<a href="{{ profile_github | escape }}">GitHub</a>{% endif %}
+          {% if profile_blog != '' %}<a href="{{ profile_blog | escape }}">기술 블로그</a>{% endif %}
+          {% if profile_pdf != '' %}
+            <a href="{{ profile_pdf | absolute_url }}">포트폴리오 PDF</a>
+          {% endif %}
+        </div>
+
         <!-- 기술 스택 -->
 
         {% if p.profile.skills.size > 0 %}
@@ -220,6 +305,34 @@
 
   </section>
 
+
+  <!-- PDF 인쇄 전용 자기소개: 화면에는 나타나지 않음 -->
+  <section class="page-width print-about" aria-label="자기소개 전문">
+    <h2>ABOUT ME</h2>
+    {% for item in p.profile.about %}
+    <div class="print-about-item">
+      <h3>{{ item.title | escape }}</h3>
+      <div class="prose">{{ item.text | markdownify }}</div>
+      {% if item.images.size > 0 %}
+      <div class="about-photo-grid">
+        {% for photo in item.images %}
+          {% assign image_src = photo.src | default: '' | strip %}
+          {% if image_src != '' %}
+          <figure class="about-photo-card">
+            <img src="{{ image_src | absolute_url }}"
+                 alt="{{ photo.caption | default: item.title | escape }}">
+            {% assign image_caption = photo.caption | default: '' | strip %}
+            {% if image_caption != '' %}
+            <figcaption>{{ image_caption | escape }}</figcaption>
+            {% endif %}
+          </figure>
+          {% endif %}
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </section>
 
   <!-- ========================================
        02. 교육 · 활동 · 경력
@@ -598,7 +711,7 @@
               {% if document_url contains '://' %}
                 {% assign document_href = document_url %}
               {% else %}
-                {% assign document_href = document_url | relative_url %}
+                {% assign document_href = document_url | absolute_url %}
               {% endif %}
 
               <a href="{{ document_href | escape }}"
@@ -830,8 +943,7 @@
         {% if image_src != '' %}
         <figure class="about-photo-card">
           <a href="{{ image_src | relative_url }}"
-             target="_blank"
-             rel="noopener noreferrer"
+             target="_blank" rel="noopener noreferrer"
              aria-label="{{ photo.caption | default: item.title | escape }} 사진 크게 보기">
             <img src="{{ image_src | relative_url }}"
                  alt="{{ photo.caption | default: item.title | escape }}"
